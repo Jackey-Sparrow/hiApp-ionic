@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+
+/* common */
+.basic-button-orange{
+    background: #ff9500;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+/* login */
+.hiApp-logo {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    display: block;
+}
+
+@media screen and (min-width: 600px) {
+    .hiApp-logo {
+        width: 100px;
+        height: 100px;
+        margin: 50px auto;
+        display: block;
+    }
+}
+
+.login-error {
+    border-color: red;
+    height: 40px;
+    text-align: center;
+    padding: 0px !important;
+    line-height: 40px;
+    color: red;
+}

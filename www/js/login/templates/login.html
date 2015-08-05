@@ -1,0 +1,30 @@
+<ion-view class="no-header">
+    <ion-content class="no-header padding">
+
+        <img src="img/hiapp_logo@2x.png" class="hiApp-logo"/>
+
+        <div class="list list-inset">
+            <label class="item item-input item-select">
+                <div class="input-label language-label">
+                    {{login.languageLabel}}
+                </div>
+                <select data-ng-model="login.languageId" class="language-select"
+                        data-ng-options="item.LanguageId as item.LanguageName for item in languages"
+                        data-ng-change="changeLanguage()"
+                        id="language"
+                        name="language">
+                </select>
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="{{login.userNameLabel}}" data-ng-model="login.userName"/>
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="{{login.passwordLabel}}" data-ng-model="login.password"/>
+            </label>
+            <button class="button button-full basic-button-orange" data-ng-click="loginFn()">{{login.loginLabel}}</button>
+            <div class="item login-error" data-ng-show="login.error">
+                {{login.error}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
