@@ -4,7 +4,7 @@
 (function (angular) {
     'use strict';
     angular.module(globalSettings.appName)
-        .controller('settingController', function($scope) {
+        .controller('settingController', function ($scope) {
             $scope.settings = {
                 enableFriends: true
             };

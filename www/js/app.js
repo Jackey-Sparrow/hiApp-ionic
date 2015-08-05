@@ -35,7 +35,7 @@ angular.module(globalSettings.appName, ['ionic'])
             .state('login', {
                 url: '/login',
                 templateUrl: 'js/login/templates/login.html',
-                controller:'loginController'
+                controller: 'loginController'
             })
 
 
