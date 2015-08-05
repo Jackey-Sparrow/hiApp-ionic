@@ -11,5 +11,4 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 - Tweet UI
 - Contact UI
 - Setting UI
-- 
 
