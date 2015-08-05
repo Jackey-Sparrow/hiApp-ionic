@@ -48,41 +48,41 @@ angular.module(globalSettings.appName, ['ionic'])
             // Each tab has its own nav history stack:
 
 
-            .state('tab.dash', {
-                url: '/dash',
+            .state('tab.tweet', {
+                url: '/tweet',
                 views: {
-                    'tab-dash': {
-                        templateUrl: 'templates/tab-dash.html',
-                        controller: 'DashCtrl'
+                    'tab-tweet': {
+                        templateUrl: 'js/tweet/templates/tweet.html',
+                        controller: 'tweetController'
                     }
                 }
             })
 
-            .state('tab.chats', {
-                url: '/chats',
+            .state('tab.contacts', {
+                url: '/contacts',
                 views: {
-                    'tab-chats': {
-                        templateUrl: 'templates/tab-chats.html',
-                        controller: 'ChatsCtrl'
+                    'tab-contacts': {
+                        templateUrl: 'js/contacts/templates/contacts.html',
+                        controller: 'contactsController'
                     }
                 }
             })
-            .state('tab.chat-detail', {
-                url: '/chats/:chatId',
+            .state('tab.contact-detail', {
+                url: '/contacts/:chatId',
                 views: {
-                    'tab-chats': {
-                        templateUrl: 'templates/chat-detail.html',
-                        controller: 'ChatDetailCtrl'
+                    'tab-contacts': {
+                        templateUrl: 'js/contacts/templates/contact-detail.html',
+                        controller: 'contactDetailController'
                     }
                 }
             })
 
-            .state('tab.account', {
-                url: '/account',
+            .state('tab.setting', {
+                url: '/setting',
                 views: {
-                    'tab-account': {
-                        templateUrl: 'templates/tab-account.html',
-                        controller: 'AccountCtrl'
+                    'tab-setting': {
+                        templateUrl: 'js/setting/templates/setting.html',
+                        controller: 'settingController'
                     }
                 }
             });

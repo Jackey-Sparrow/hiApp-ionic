@@ -18,7 +18,10 @@
                     userNameLabel: 'UserName',
                     passwordLabel: 'Password',
                     languageLabel: 'Language',
-                    loginLabel: 'Login'
+                    loginLabel: 'Login',
+                    loginFn: function () {
+                        $state.go('tab.tweet');
+                    }
                 };
                 $scope.languages = [
                     {
