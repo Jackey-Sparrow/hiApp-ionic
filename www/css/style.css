@@ -1,13 +1,12 @@
 /* Empty. Add your own CSS if you like */
 
 /* common */
-.basic-button-orange{
+.basic-button-orange {
     background: #ff9500;
     color: #fff;
     border-radius: 5px;
     border-color: #ffffff;
 }
-
 
 /* login */
 .hiApp-logo {
@@ -33,4 +32,9 @@
     padding: 0px !important;
     line-height: 40px;
     color: red;
+}
+
+/*rewrite*/
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+    color: #ff9500;
 }
