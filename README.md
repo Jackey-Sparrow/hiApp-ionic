@@ -5,8 +5,8 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 
 #schedule
 
-- login UI (DONE)
-- translate (NOT START)
+- login UI (done)
+- translate (done)
 - localStorage
 - Tweet UI
 - Contact UI

@@ -6,54 +6,33 @@
 
     /* jshint -W072 */ // many parameters because of dependency injection
     angular.module(globalSettings.appName).controller('loginController',
-        ['$scope', '$state', '$http', 'loginService',
-            function ($scope, $state, $http, loginService) {
+        ['$scope', '$state', '$http', 'loginService','$translate',
+            function ($scope, $state, $http, loginService,$translate) {
 
                 $scope.title = 'login';
                 $scope.login = {
                     userName: '',
                     password: '',
                     error: '',
-                    languageId: 2,
-                    userNameLabel: 'UserName',
-                    passwordLabel: 'Password',
-                    languageLabel: 'Language',
-                    loginLabel: 'Login',
+                    languageId: 1,
+                    userNameLabel: $translate.instant('login.userName'),
+                    passwordLabel: $translate.instant('login.password'),
+                    languageLabel: $translate.instant('login.language'),
+                    loginLabel: $translate.instant('login.login'),
                     loginFn: function () {
                         $state.go('tab.tweet');
                     }
                 };
                 $scope.languages = [
                     {
-                        LanguageId: 2,
+                        LanguageId: 1,
                         LanguageName: 'English',
                         language: 'en',
                         culture: 'en-gb',
                         languageTranslate: 'en'
                     },
                     {
-                        LanguageId: 1,
-                        LanguageName: 'German',
-                        language: 'de',
-                        culture: 'de-de',
-                        languageTranslate: 'de'
-                    },
-                    {
-                        LanguageId: 3,
-                        LanguageName: 'German-de',
-                        language: 'de-de',
-                        culture: 'de-de',
-                        languageTranslate: 'de-de'
-                    },
-                    {
-                        LanguageId: 4,
-                        LanguageName: 'English-US',
-                        language: 'en-us',
-                        culture: 'en-us',
-                        languageTranslate: 'en-us'
-                    },
-                    {
-                        LanguageId: 5,
+                        LanguageId: 2,
                         LanguageName: 'Chinese',
                         language: 'en',
                         culture: 'en-gb',
@@ -62,8 +41,25 @@
                 ];
 
                 $scope.changeLanguage = function () {
-
+                    $scope.chooseLanguage = getLanguageById($scope.login.languageId);
+                    $translate.use($scope.chooseLanguage.languageTranslate);
+                    $scope.login.userNameLabel = $translate.instant('login.userName');
+                    $scope.login.passwordLabel = $translate.instant('login.password');
+                    $scope.login.languageLabel = $translate.instant('login.language');
+                    $scope.login.loginLabel = $translate.instant('login.login');
                 };
+
+                $scope.chooseLanguage = getLanguageById($scope.login.languageId);
+
+                function getLanguageById(Id) {
+                    var len = $scope.languages.length;
+                    for (var i = 0; i < len; i++) {
+                        var language = $scope.languages[i];
+                        if (language.LanguageId === Id) {
+                            return language;
+                        }
+                    }
+                }
 
             }
         ]);

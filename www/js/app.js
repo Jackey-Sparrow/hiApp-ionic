@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module(globalSettings.appName, ['ionic'])
+angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -90,4 +90,47 @@ angular.module(globalSettings.appName, ['ionic'])
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/login');
 
+    })
+
+    .config(function ($translateProvider) {
+        $translateProvider.translations('en', {
+            login: {
+                userName: 'UserName',
+                password: 'Password',
+                language: 'Language',
+                login: 'Login',
+                error: ''
+            },
+            tweet: {
+                tweetName: 'Tweet'
+            },
+            contacts: {
+                contactsName: 'Contacts'
+            },
+            setting: {
+                settingName: 'Setting'
+            }
+        });
+
+        $translateProvider.translations('cn', {
+            login: {
+                userName: '用户名',
+                password: '密码',
+                language: '语言',
+                login: '登录',
+                error: ''
+            },
+            tweet: {
+                tweetName: '推特'
+            },
+            contacts: {
+                contactsName: '通讯录'
+            },
+            setting: {
+                settingName: '设置'
+            }
+        });
+
+        var key = 'en';
+        $translateProvider.preferredLanguage(key);
     });
