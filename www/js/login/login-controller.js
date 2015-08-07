@@ -6,10 +6,9 @@
 
     /* jshint -W072 */ // many parameters because of dependency injection
     angular.module(globalSettings.appName).controller('loginController',
-        ['$scope', '$state', '$http', 'loginService','$translate',
-            function ($scope, $state, $http, loginService,$translate) {
+        ['$scope', '$state', '$http', 'loginService', '$translate', 'basicControllerService',
+            function ($scope, $state, $http, loginService, $translate, basicControllerService) {
 
-                $scope.title = 'login';
                 $scope.login = {
                     userName: '',
                     password: '',
@@ -20,9 +19,20 @@
                     languageLabel: $translate.instant('login.language'),
                     loginLabel: $translate.instant('login.login'),
                     loginFn: function () {
-                        $state.go('tab.tweet');
+
+                        //a fake login loading
+                        $scope.showLoading();
+                        setTimeout(function () {
+                            $scope.hideLoading();
+                            $state.go('tab.tweet');
+                        }, 2000);
                     }
                 };
+
+                //extend basic controller
+                basicControllerService.initController($scope);
+
+                //todo:provide a language service
                 $scope.languages = [
                     {
                         LanguageId: 1,
@@ -40,6 +50,9 @@
                     }
                 ];
 
+                /*
+                * change language and reset the translate setting
+                 */
                 $scope.changeLanguage = function () {
                     $scope.chooseLanguage = getLanguageById($scope.login.languageId);
                     $translate.use($scope.chooseLanguage.languageTranslate);
@@ -51,6 +64,9 @@
 
                 $scope.chooseLanguage = getLanguageById($scope.login.languageId);
 
+                /*
+                 * get language by languageId
+                 */
                 function getLanguageById(Id) {
                     var len = $scope.languages.length;
                     for (var i = 0; i < len; i++) {

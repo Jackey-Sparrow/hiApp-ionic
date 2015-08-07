@@ -4,7 +4,8 @@
 (function (angular) {
     'use strict';
     angular.module(globalSettings.appName).controller('tweetController',
-        ['$scope', function ($scope) {
-
-    }]);
+        ['$scope', 'basicControllerService',
+            function ($scope, basicControllerService) {
+                basicControllerService.initController($scope);
+            }]);
 })(angular);

@@ -3,7 +3,8 @@
  */
 (function (angular) {
     'use strict';
-    angular.module('ionic.util', []).
+
+    angular.module(globalSettings.appName).
         factory('localStorageService',
         ['$window',
             function ($window) {
