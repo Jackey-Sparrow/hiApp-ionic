@@ -9,7 +9,8 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 - translate (done)
 - need a language service(isolate from login controller)
 - localStorage
-- Tweet UI
+- Tweet UI(done)
 - Contact UI
 - Setting UI
+- Tweet post(including photo upload)
 
