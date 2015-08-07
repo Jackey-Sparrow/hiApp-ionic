@@ -7,6 +7,7 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 
 - login UI (done)
 - translate (done)
+- need a language service(isolate from login controller)
 - localStorage
 - Tweet UI
 - Contact UI
