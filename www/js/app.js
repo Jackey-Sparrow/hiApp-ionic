@@ -93,6 +93,8 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
     })
 
     .config(function ($translateProvider) {
+
+        //translate
         $translateProvider.translations('en', {
             login: {
                 userName: 'UserName',

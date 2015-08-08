@@ -3,11 +3,15 @@
  */
 (function (angular) {
     'use strict';
+
+    /*
+     * tweet controller
+     */
     angular.module(globalSettings.appName).controller('tweetController',
         ['$scope', 'basicControllerService', 'platformModal', 'tweetService', '$translate',
             function ($scope, basicControllerService, platformModal, tweetService, $translate) {
 
-                //transate
+                //translate
                 $scope.tweetTranslate = {
                     like: $translate.instant('tweet.like'),
                     comments: $translate.instant('tweet.comments'),
@@ -34,6 +38,9 @@
                     hideModal: platformModal.hideModal
                 };
 
+                /*
+                 * destroy
+                 */
                 $scope.$on('$destroy', function () {
                     $scope.modal.remove();
                 })
