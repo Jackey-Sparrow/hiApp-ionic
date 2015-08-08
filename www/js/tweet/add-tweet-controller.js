@@ -7,7 +7,7 @@
         ['$scope', function ($scope) {
             $scope.title = 'add tweet';
             $scope.back = function(){
-                $scope.modalTest.hideModal();
+                $scope.modalFn.hideModal();
             };
         }]);
 })(angular);

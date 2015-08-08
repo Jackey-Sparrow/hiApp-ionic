@@ -7,15 +7,15 @@
         ['$scope', 'basicControllerService', 'platformModal',
             function ($scope, basicControllerService, platformModal) {
                 //basicControllerService.initController($scope);
-                $scope.openModal = function () {
-                    var options = {
-                        templateUrl: 'js/tweet/templates/add-tweet.html',
-                        scope: $scope
-                    };
-                    platformModal.openModal(options);
-                };
 
-                $scope.modalTest = {
+
+                $scope.modalFn = {
+                    openModal: function () {
+                        platformModal.openModal({
+                            templateUrl: 'js/tweet/templates/add-tweet.html',
+                            scope: $scope
+                        });
+                    },
                     hideModal: platformModal.hideModal
                 };
 

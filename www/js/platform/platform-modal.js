@@ -13,6 +13,9 @@
             var service = {},
                 scope;
 
+            /*
+             * set options and open the modal
+             */
             service.openModal = function (options) {
                 scope = options.scope;
                 $ionicModal.fromTemplateUrl(options.templateUrl, {
@@ -24,14 +27,13 @@
                 });
             };
 
+            /*
+             * hide modal and delete scope modal
+             */
             service.hideModal = function () {
                 scope.modal.hide();
                 delete scope.modal;
             };
-
-            //scope.$on('$destroy', function () {
-            //    scope.modal.remove();
-            //});
 
             return service;
         }]);
