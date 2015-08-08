@@ -4,6 +4,9 @@
 (function (angular) {
     'use strict';
 
+    /*
+     * local storage service
+     */
     angular.module(globalSettings.appName).
         factory('localStorageService',
         ['$window',

@@ -3,6 +3,9 @@
  */
 (function (angular) {
     'use strict';
+    /*
+     * tweet service
+     */
     angular.module(globalSettings.appName).factory('tweetService',
         [function () {
             var service = {};

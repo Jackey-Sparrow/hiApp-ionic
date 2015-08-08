@@ -14,4 +14,5 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 - Setting UI
 - Tweet post(including photo upload)
 - use gulp to Compression the code
+- contacts search bar need to optimize
 

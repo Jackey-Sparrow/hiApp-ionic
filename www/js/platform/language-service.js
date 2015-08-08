@@ -3,6 +3,10 @@
  */
 (function (angular) {
     'use strict';
+
+    /*
+     * language service
+     */
     angular.module(globalSettings.appName).factory('languageService',
         [function () {
             var service = {},
