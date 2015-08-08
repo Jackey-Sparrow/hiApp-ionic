@@ -3,42 +3,30 @@
  */
 (function (angular) {
     'use strict';
+
     /*
      * tweet service
      */
     angular.module(globalSettings.appName).factory('tweetService',
-        [function () {
-            var service = {};
+        ['$q', '$http', function ($q, $http) {
+            var service = {},
+                lists = [];
 
             /*
-             * get list
+             * get tweet by pagination
              */
-            service.getList = function () {
-                var list = [
-                    {
-                        name: 'Jackey Li',
-                        icon: 'img/avatar/avatar01.jpg',
-                        insertDate: 'November 05, 1955',
-                        content: 'This is a "Facebook" styled Card. The header is created from a Thumbnail List item,' +
-                        'the content is from a card-body consisting of an image and paragraph text. The footer' +
-                        'consists of tabs, icons aligned left, within the card-footer.',
-                        photos: ['img/upload/cat.jpg'],
-                        likes: 5,
-                        comments: 10
-                    },
-                    {
-                        name: 'Jackey Li',
-                        icon: 'img/avatar/avatar01.jpg',
-                        insertDate: 'November 05, 1955',
-                        content: 'This is a "Facebook" styled Card. The header is created from a Thumbnail List item,' +
-                        'the content is from a card-body consisting of an image and paragraph text. The footer' +
-                        'consists of tabs, icons aligned left, within the card-footer.',
-                        photos: ['img/upload/cat.jpg'],
-                        likes: 5,
-                        comments: 10
-                    }
-                ];
-                return list;
+            service.getTweetByPagination = function (options) {
+                var pageNumber = options.pageNumber,
+                    pageSize = options.pageSize,
+                    start = pageNumber * pageSize,
+                    end = (pageNumber + 1) * pageSize,
+                    defer = $q.defer();
+                $http.post('js/tweet/tweet.json').then(function (response) {
+                    defer.resolve(response.data.slice(start, end));
+                }, function (error) {
+                    console.log(error);
+                });
+                return defer.promise;
             };
 
             return service;

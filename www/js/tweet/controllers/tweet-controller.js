@@ -8,8 +8,8 @@
      * tweet controller
      */
     angular.module(globalSettings.appName).controller('tweetController',
-        ['$scope', 'basicControllerService', 'platformModal', 'tweetService', '$translate',
-            function ($scope, basicControllerService, platformModal, tweetService, $translate) {
+        ['$scope', 'basicControllerService', 'platformModal', 'tweetService', '$translate', '$timeout',
+            function ($scope, basicControllerService, platformModal, tweetService, $translate, $timeout) {
 
                 //translate
                 $scope.tweetTranslate = {
@@ -20,10 +20,38 @@
                     tweetName: $translate.instant('tweet.tweetName')
                 };
 
+                //decide infinite-scroll
+                $scope.moreTweet = true;
+
+                $scope.options = {
+                    pageNumber: 0,
+                    pageSize: 10
+                };
+
+                //tweet list
+                $scope.list =[];
+
                 /*
-                 * list
+                 *infinite scroll to load more
                  */
-                $scope.list = tweetService.getList();
+                $scope.loadMore = function () {
+
+                    $timeout(function () {
+
+                        tweetService.getTweetByPagination($scope.options).then(function (data) {
+                            if (data.length) {
+                                $scope.options.pageNumber++;
+                                $scope.list = $scope.list.concat(data);
+                                $scope.$broadcast('scroll.infiniteScrollComplete');
+                            } else {
+                                $scope.moreTweet = false;
+                            }
+
+                        }, function () {
+                            $scope.moreContact = false;
+                        });
+                    }, 1000);
+                };
 
                 /*
                  * add tweet modal

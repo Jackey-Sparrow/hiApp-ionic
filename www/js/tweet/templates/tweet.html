@@ -47,6 +47,9 @@
 
         </div>
 
-
+        <ion-infinite-scroll on-infinite="loadMore()" data-ng-if="moreTweet" immediate-check="true"
+                             distance="10%"></ion-infinite-scroll>
     </ion-content>
+
+
 </ion-view>
