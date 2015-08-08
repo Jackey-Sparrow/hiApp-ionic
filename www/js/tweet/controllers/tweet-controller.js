@@ -23,18 +23,25 @@
                 //decide infinite-scroll
                 $scope.moreTweet = true;
 
+                //two way to load data
+                var loadDataType = {
+                    refresh: 'refresh',
+                    loadMore: 'loadMore'
+                };
+
                 $scope.options = {
                     pageNumber: 0,
-                    pageSize: 10
+                    pageSize: 10,
+                    type: loadDataType.loadMore
                 };
 
                 //tweet list
-                $scope.list =[];
+                $scope.list = [];
 
                 /*
-                 *infinite scroll to load more
+                 * get data
                  */
-                $scope.loadMore = function () {
+                $scope.getData = function () {
 
                     $timeout(function () {
 
@@ -42,7 +49,13 @@
                             if (data.length) {
                                 $scope.options.pageNumber++;
                                 $scope.list = $scope.list.concat(data);
-                                $scope.$broadcast('scroll.infiniteScrollComplete');
+                                if ($scope.options.type === loadDataType.loadMore) {
+                                    $scope.$broadcast('scroll.infiniteScrollComplete');
+                                } else {
+                                    $scope.$broadcast("scroll.refreshComplete");
+                                    //the first refresh, set the can more tweet true
+                                    $scope.moreTweet = true;
+                                }
                             } else {
                                 $scope.moreTweet = false;
                             }
@@ -51,6 +64,27 @@
                             $scope.moreContact = false;
                         });
                     }, 1000);
+                };
+
+                /*
+                 * load more
+                 */
+                $scope.loadMore = function () {
+                    $scope.options.type = loadDataType.loadMore;
+                    $scope.getData();
+                };
+
+                /*
+                 * refresh
+                 */
+                $scope.refresh = function () {
+                    $scope.list = [];
+                    $scope.options = {
+                        pageNumber: 0,
+                        pageSize: 10,
+                        type: loadDataType.refresh
+                    };
+                    $scope.getData();
                 };
 
                 /*
