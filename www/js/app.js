@@ -102,7 +102,11 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
                 error: ''
             },
             tweet: {
-                tweetName: 'Tweet'
+                tweetName: 'Tweet',
+                like:'Like',
+                comments:'Comments',
+                comment:'Comment',
+                share:'Share'
             },
             contacts: {
                 contactsName: 'Contacts'
@@ -121,7 +125,11 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
                 error: ''
             },
             tweet: {
-                tweetName: '推特'
+                tweetName: '推特',
+                like:'赞',
+                comments:'评论',
+                comment:'评论',
+                share:'分享'
             },
             contacts: {
                 contactsName: '通讯录'

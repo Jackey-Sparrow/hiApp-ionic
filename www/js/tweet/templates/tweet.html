@@ -1,6 +1,7 @@
-<ion-header-bar class="bar-header bar-light" >
+<ion-header-bar class="bar-header bar-light">
     <i class="i-button icon ion-ios-refresh-empty"></i>
-    <h1 class="title">Tweet</h1>
+
+    <h1 class="title">{{::tweetTranslate.tweetName}}</h1>
     <i class="i-button icon ion-ios-compose-outline i-header-right" on-tap="modalFn.openModal()"></i>
 </ion-header-bar>
 
@@ -8,80 +9,44 @@
 
     <ion-content class="padding bg-gray">
 
-        <div class="list card bg-white">
+        <div class="list card bg-white" data-ng-repeat="tweet in list">
 
             <div class="item item-avatar">
-                <img src="mcfly.jpg">
-                <h2 class="text-orange">Marty McFly</h2>
-                <p>November 05, 1955</p>
+                <img src="{{::tweet.icon}}">
+
+                <h2 class="text-orange">{{::tweet.name}}</h2>
+
+                <p>{{::tweet.insertDate}}</p>
             </div>
 
             <div class="item item-body">
-                <img class="full-image" src="delorean.jpg">
+                <img class="full-image" data-ng-repeat="photo in tweet.photos" src="{{photo}}">
+
+                <p>{{::tweet.content}}</p>
+
                 <p>
-                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                    the content is from a card-body consisting of an image and paragraph text. The footer
-                    consists of tabs, icons aligned left, within the card-footer.
-                </p>
-                <p>
-                    <a href="#" class="subdued">1 Like</a>
-                    <a href="#" class="subdued">5 Comments</a>
+                    <a href="#" class="subdued">{{::tweet.likes}} {{::tweetTranslate.like}}</a>
+                    <a href="#" class="subdued">{{::tweet.comments}} {{::tweetTranslate.comments}}</a>
                 </p>
             </div>
 
             <div class="item tabs tabs-secondary tabs-icon-left bg-light-gray">
                 <a class="tab-item" href="#">
                     <i class="icon ion-thumbsup"></i>
-                    Like
+                    {{::tweetTranslate.like}}
                 </a>
                 <a class="tab-item" href="#">
                     <i class="icon ion-chatbox"></i>
-                    Comment
+                    {{::tweetTranslate.comment}}
                 </a>
                 <a class="tab-item" href="#">
                     <i class="icon ion-share"></i>
-                    Share
+                    {{::tweetTranslate.share}}
                 </a>
             </div>
 
         </div>
 
-        <div class="list card bg-white">
 
-            <div class="item item-avatar">
-                <img src="mcfly.jpg">
-                <h2 class="text-orange">Marty McFly</h2>
-                <p>November 05, 1955</p>
-            </div>
-
-            <div class="item item-body">
-                <img class="full-image" src="delorean.jpg">
-                <p>
-                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                    the content is from a card-body consisting of an image and paragraph text. The footer
-                    consists of tabs, icons aligned left, within the card-footer.
-                </p>
-                <p>
-                    <a href="#" class="subdued">1 Like</a>
-                    <a href="#" class="subdued">5 Comments</a>
-                </p>
-            </div>
-
-            <div class="item tabs tabs-secondary tabs-icon-left bg-light-gray">
-                <a class="tab-item" href="#">
-                    <i class="icon ion-thumbsup"></i>
-                    Like
-                </a>
-                <a class="tab-item" href="#">
-                    <i class="icon ion-chatbox"></i>
-                    Comment
-                </a>
-                <a class="tab-item" href="#">
-                    <i class="icon ion-share"></i>
-                    Share
-                </a>
-            </div>
-
-        </div>
     </ion-content>
 </ion-view>
