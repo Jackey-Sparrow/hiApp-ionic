@@ -6,8 +6,8 @@
 
     /* jshint -W072 */ // many parameters because of dependency injection
     angular.module(globalSettings.appName).controller('loginController',
-        ['$scope', '$state', '$http', 'loginService', '$translate', 'basicControllerService',
-            function ($scope, $state, $http, loginService, $translate, basicControllerService) {
+        ['$scope', '$state', '$http', 'loginService', '$translate', 'basicControllerService','languageService',
+            function ($scope, $state, $http, loginService, $translate, basicControllerService,languageService) {
 
                 $scope.login = {
                     userName: '',
@@ -33,28 +33,13 @@
                 basicControllerService.initController($scope);
 
                 //todo:provide a language service
-                $scope.languages = [
-                    {
-                        LanguageId: 1,
-                        LanguageName: 'English',
-                        language: 'en',
-                        culture: 'en-gb',
-                        languageTranslate: 'en'
-                    },
-                    {
-                        LanguageId: 2,
-                        LanguageName: 'Chinese',
-                        language: 'en',
-                        culture: 'en-gb',
-                        languageTranslate: 'cn'
-                    }
-                ];
+                $scope.languages = languageService.getList();
 
                 /*
                 * change language and reset the translate setting
                  */
                 $scope.changeLanguage = function () {
-                    $scope.chooseLanguage = getLanguageById($scope.login.languageId);
+                    $scope.chooseLanguage = languageService.getLanguageById($scope.login.languageId);
                     $translate.use($scope.chooseLanguage.languageTranslate);
                     $scope.login.userNameLabel = $translate.instant('login.userName');
                     $scope.login.passwordLabel = $translate.instant('login.password');
@@ -62,20 +47,7 @@
                     $scope.login.loginLabel = $translate.instant('login.login');
                 };
 
-                $scope.chooseLanguage = getLanguageById($scope.login.languageId);
-
-                /*
-                 * get language by languageId
-                 */
-                function getLanguageById(Id) {
-                    var len = $scope.languages.length;
-                    for (var i = 0; i < len; i++) {
-                        var language = $scope.languages[i];
-                        if (language.LanguageId === Id) {
-                            return language;
-                        }
-                    }
-                }
+                $scope.chooseLanguage = languageService.getLanguageById($scope.login.languageId);
 
             }
         ]);
