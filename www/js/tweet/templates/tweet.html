@@ -1,5 +1,6 @@
 <ion-header-bar class="bar-header bar-light">
     <i class="i-button icon ion-ios-refresh-empty" on-tap="refresh()"></i>
+
     <h1 class="title">{{::tweetTranslate.tweetName}}</h1>
     <i class="i-button icon ion-ios-compose-outline i-header-right" on-tap="modalFn.openModal()"></i>
 </ion-header-bar>
@@ -51,6 +52,5 @@
         <ion-infinite-scroll on-infinite="loadMore()" data-ng-if="moreTweet" immediate-check="true"
                              distance="10%"></ion-infinite-scroll>
     </ion-content>
-
 
 </ion-view>

@@ -9,8 +9,7 @@
      */
     angular.module(globalSettings.appName).factory('tweetService',
         ['$q', '$http', function ($q, $http) {
-            var service = {},
-                lists = [];
+            var service = {};
 
             /*
              * get tweet by pagination

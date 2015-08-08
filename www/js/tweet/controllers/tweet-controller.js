@@ -29,6 +29,7 @@
                     loadMore: 'loadMore'
                 };
 
+                //page options
                 $scope.options = {
                     pageNumber: 0,
                     pageSize: 10,
@@ -50,9 +51,11 @@
                                 $scope.options.pageNumber++;
                                 $scope.list = $scope.list.concat(data);
                                 if ($scope.options.type === loadDataType.loadMore) {
+
                                     $scope.$broadcast('scroll.infiniteScrollComplete');
                                 } else {
-                                    $scope.$broadcast("scroll.refreshComplete");
+                                    $scope.$broadcast('scroll.refreshComplete');
+                                    //$scope.list = data;
                                     //the first refresh, set the can more tweet true
                                     $scope.moreTweet = true;
                                 }
@@ -78,7 +81,7 @@
                  * refresh
                  */
                 $scope.refresh = function () {
-                    $scope.list = [];
+                    $scope.list =[];
                     $scope.options = {
                         pageNumber: 0,
                         pageSize: 10,
@@ -105,6 +108,6 @@
                  */
                 $scope.$on('$destroy', function () {
                     $scope.modal.remove();
-                })
+                });
             }]);
 })(angular);

@@ -24,7 +24,7 @@
                     //hide loading
                     $scope.hideLoading = function () {
                         $ionicLoading.hide();
-                    }
+                    };
 
                     //show dialog
                     //todo:translate

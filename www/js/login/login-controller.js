@@ -6,8 +6,8 @@
 
     /* jshint -W072 */ // many parameters because of dependency injection
     angular.module(globalSettings.appName).controller('loginController',
-        ['$scope', '$state', '$http', 'loginService', '$translate', 'basicControllerService','languageService',
-            function ($scope, $state, $http, loginService, $translate, basicControllerService,languageService) {
+        ['$scope', '$state', '$http', 'loginService', '$translate', 'basicControllerService', 'languageService',
+            function ($scope, $state, $http, loginService, $translate, basicControllerService, languageService) {
 
                 $scope.login = {
                     userName: '',
@@ -36,7 +36,7 @@
                 $scope.languages = languageService.getList();
 
                 /*
-                * change language and reset the translate setting
+                 * change language and reset the translate setting
                  */
                 $scope.changeLanguage = function () {
                     $scope.chooseLanguage = languageService.getLanguageById($scope.login.languageId);
@@ -53,8 +53,8 @@
         ]);
 
     angular.module(globalSettings.appName).factory('loginService',
-        ['$q', '$http',
-            function ($q, $http) {
+        [
+            function () {
 
                 return null;
             }]);

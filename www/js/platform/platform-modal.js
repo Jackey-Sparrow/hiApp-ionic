@@ -32,7 +32,9 @@
              */
             service.hideModal = function () {
                 scope.modal.hide();
-                delete scope.modal;
+                if (scope.modal) {
+                    delete scope.modal;
+                }
             };
 
             return service;
