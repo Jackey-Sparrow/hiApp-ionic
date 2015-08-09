@@ -66,7 +66,7 @@
                         }, function () {
                             $scope.moreContact = false;
                         });
-                    }, 1000);
+                    }, 3000);
                 };
 
                 /*

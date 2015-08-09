@@ -8,20 +8,20 @@
      * language service
      */
     angular.module(globalSettings.appName).factory('languageService',
-        [function () {
+        ['$translate', function ($translate) {
             var service = {},
                 languageList = [
                     {
                         LanguageId: 1,
-                        LanguageName: 'English',
+                        LanguageName: $translate.instant('language.english'),
                         language: 'en',
                         culture: 'en-gb',
                         languageTranslate: 'en'
                     },
                     {
                         LanguageId: 2,
-                        LanguageName: 'Chinese',
-                        language: 'en',
+                        LanguageName: $translate.instant('language.chinese'),
+                        language: 'cn',
                         culture: 'en-gb',
                         languageTranslate: 'cn'
                     }
@@ -46,6 +46,15 @@
                         return language;
                     }
                 }
+            };
+
+            /*
+             *  refresh the translate language
+             *  todo: hard code, need to rewrite
+             */
+            service.refreshLanguage = function () {
+                languageList[0].LanguageName = $translate.instant('language.english');
+                languageList[1].LanguageName = $translate.instant('language.chinese');
             };
 
             return service;

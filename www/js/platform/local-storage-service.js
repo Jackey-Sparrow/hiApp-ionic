@@ -22,7 +22,17 @@
                         $window.localStorage[key] = JSON.stringify(value);
                     },
                     getObj: function (key) {
-                        return JSON.parse($window.localStorage[key]) || [];
+                        var result = $window.localStorage[key];
+                        if (result) {
+                            return JSON.parse(result);
+                        }
+                        return null;
+                    },
+                    setUserInfo: function (obj) {
+                        this.setObj('hiAppUserInfo', obj);
+                    },
+                    getUserInfo: function () {
+                        return this.getObj('hiAppUserInfo');
                     }
                 };
             }]);

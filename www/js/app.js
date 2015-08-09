@@ -115,16 +115,20 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
             },
             tweet: {
                 tweetName: 'Tweet',
-                like:'Like',
-                comments:'Comments',
-                comment:'Comment',
-                share:'Share'
+                like: 'Like',
+                comments: 'Comments',
+                comment: 'Comment',
+                share: 'Share'
             },
             contacts: {
                 contactsName: 'Contacts'
             },
             setting: {
                 settingName: 'Setting'
+            },
+            language: {
+                english: 'English',
+                chinese: 'Chinese'
             }
         });
 
@@ -138,19 +142,29 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
             },
             tweet: {
                 tweetName: '推特',
-                like:'赞',
-                comments:'评论',
-                comment:'评论',
-                share:'分享'
+                like: '赞',
+                comments: '评论',
+                comment: '评论',
+                share: '分享'
             },
             contacts: {
                 contactsName: '通讯录'
             },
             setting: {
                 settingName: '设置'
+            },
+            language: {
+                english: '英文',
+                chinese: '中文'
             }
         });
 
         var key = 'en';
+
+        var lastStoreUser = JSON.parse(localStorage.getItem('hiAppUserInfo')) || [];
+        if (lastStoreUser && lastStoreUser.languageTranslate) {
+            key = lastStoreUser.languageTranslate;
+        }
+
         $translateProvider.preferredLanguage(key);
     });
