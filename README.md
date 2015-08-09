@@ -17,5 +17,5 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 - contacts search bar need to optimize
 
 #remark knowledge
-- $ionicHistory.goBack() won¡¯t remember scroll position unless use css class"button" css='button'
+- $ionicHistory.goBack() won't remember scroll position unless use css class"button" css='button'
 
