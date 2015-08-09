@@ -59,15 +59,15 @@
                  */
                 $scope.changeLanguage = function () {
                     $scope.chooseLanguage = languageService.getLanguageById($scope.login.languageId);
+                    //change the language setting
                     $translate.use($scope.chooseLanguage.languageTranslate);
                     $scope.login.userNameLabel = $translate.instant('login.userName');
                     $scope.login.passwordLabel = $translate.instant('login.password');
                     $scope.login.languageLabel = $translate.instant('login.language');
                     $scope.login.loginLabel = $translate.instant('login.login');
+                    //set the language translate
                     languageService.refreshLanguage();
                 };
-
-                $scope.chooseLanguage = languageService.getLanguageById($scope.login.languageId);
 
             }
         ]);
