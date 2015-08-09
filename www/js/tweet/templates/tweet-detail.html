@@ -1,0 +1,34 @@
+<ion-header-bar class="bar-header bar-light">
+    <button class="button i-button icon ion-ios-arrow-thin-left" href="#/tab/tweet" on-tap="back()"></button>
+
+    <h1 class="title">tweet detail</h1>
+    <i class="i-button icon ion-ios-compose-outline i-header-right" on-tap="modalFn.openModal()"></i>
+</ion-header-bar>
+
+<ion-view view-title="Dashboard">
+
+    <ion-content class="padding bg-gray">
+
+        <div class="list card bg-white">
+
+            <div class="item item-avatar">
+                <img src="{{::tweet.icon}}">
+
+                <h2 class="text-orange">{{::tweet.name}}</h2>
+
+                <p>{{::tweet.insertDate}}</p>
+            </div>
+
+            <div class="item item-body">
+                <img class="full-image" data-ng-repeat="photo in tweet.photos" src="{{photo}}">
+
+                <p>{{::tweet.content}}</p>
+
+            </div>
+
+        </div>
+
+
+    </ion-content>
+
+</ion-view>

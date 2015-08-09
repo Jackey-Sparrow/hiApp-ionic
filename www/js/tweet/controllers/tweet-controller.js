@@ -50,12 +50,12 @@
                             if (data.length) {
                                 $scope.options.pageNumber++;
                                 $scope.list = $scope.list.concat(data);
+                                //store tweet list
+                                tweetService.setList($scope.list);
                                 if ($scope.options.type === loadDataType.loadMore) {
-
                                     $scope.$broadcast('scroll.infiniteScrollComplete');
                                 } else {
                                     $scope.$broadcast('scroll.refreshComplete');
-                                    //$scope.list = data;
                                     //the first refresh, set the can more tweet true
                                     $scope.moreTweet = true;
                                 }

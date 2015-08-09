@@ -58,6 +58,16 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
                 }
             })
 
+            .state('tab.tweet-detail', {
+                url: '/tweet/:tweetId',
+                views: {
+                    'tab-tweet': {
+                        templateUrl: 'js/tweet/templates/tweet-detail.html',
+                        controller: 'tweetDetailController'
+                    }
+                }
+            })
+
             .state('tab.contacts', {
                 url: '/contacts',
                 views: {

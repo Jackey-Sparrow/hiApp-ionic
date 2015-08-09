@@ -9,7 +9,35 @@
      */
     angular.module(globalSettings.appName).factory('tweetService',
         ['$q', '$http', function ($q, $http) {
-            var service = {};
+            var service = {},
+                list = [];
+
+            /*
+             * set tweet list
+             */
+            service.setList = function (data) {
+                list = data;
+            };
+
+            /*
+             * get tweet list
+             */
+            service.getList = function () {
+                return list;
+            };
+
+            /*
+             * get tweet by Id
+             */
+            service.getTweetById = function (id) {
+                var mapElement = list.filter(function (item) {
+                    return item.id === id;
+                });
+                if (mapElement.length) {
+                    return mapElement[0];
+                }
+                return null;
+            };
 
             /*
              * get tweet by pagination
