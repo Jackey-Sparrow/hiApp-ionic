@@ -24,7 +24,7 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 - ion-infinite-scroll call twice issue: 1 try immediate-check="false" 2 ng-if="!endOfList && items && items.length > 0" 
   3 $ionicScrollDelegate.resize() [this works];
 
-# how to use gulp
+# use gulp
 - go to your directory and download the package
 
 ```
@@ -40,7 +40,7 @@ npm install
   ```
   Run->Edit Configurations -> add a new configuration -> select gulp.js
   ```
-  
+
 
   ##setting:
 
