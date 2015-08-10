@@ -20,4 +20,5 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 
 #remark knowledge
 - $ionicHistory.goBack() won't remember scroll position unless use css class"button" css='button'
-
+- ion-infinite-scroll call twice issue: 1 try immediate-check="false" 2 ng-if="!endOfList && items && items.length > 0" 
+  3 $ionicScrollDelegate.resize();
