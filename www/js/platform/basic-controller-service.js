@@ -5,8 +5,8 @@
     'use strict';
 
     angular.module(globalSettings.appName).factory('basicControllerService',
-        ['$ionicLoading', '$ionicPopup', '$ionicModal',
-            function ($ionicLoading, $ionicPopup, $ionicModal) {
+        ['$ionicLoading', '$ionicPopup',
+            function ($ionicLoading, $ionicPopup) {
                 var service = {};
 
                 /*
@@ -36,28 +36,28 @@
                         });
                     };
 
-                    //modal
-                    $ionicModal.fromTemplateUrl('js/tweet/templates/add-tweet.html', {
-                        scope: $scope,
-                        animation: 'slide-in-up'
-                    }).then(function (modal) {
-                        $scope.modal = modal;
-                    });
-                    $scope.openModal = function () {
-                        $scope.modal.show();
-                    };
-                    $scope.closeModal = function () {
-                        $scope.modal.hide();
-                    };
+                    ////modal
+                    //$ionicModal.fromTemplateUrl('js/tweet/templates/add-tweet.html', {
+                    //    scope: $scope,
+                    //    animation: 'slide-in-up'
+                    //}).then(function (modal) {
+                    //    $scope.modal = modal;
+                    //});
+                    //$scope.openModal = function () {
+                    //    $scope.modal.show();
+                    //};
+                    //$scope.closeModal = function () {
+                    //    $scope.modal.hide();
+                    //};
 
                     //destroy
                     $scope.$on('$destroy', function () {
                         if ($scope.popUp) {
                             $scope.popUp.remove();
                         }
-                        if ($scope.modal) {
-                            $scope.modal.remove();
-                        }
+                        //if ($scope.modal) {
+                        //    $scope.modal.remove();
+                        //}
                     });
                 };
 

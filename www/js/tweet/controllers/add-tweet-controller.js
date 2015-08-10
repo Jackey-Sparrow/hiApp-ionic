@@ -13,7 +13,7 @@
             /*
              * back
              */
-            $scope.back = function(){
+            $scope.back = function () {
                 $scope.modalFn.hideModal();
             };
         }]);

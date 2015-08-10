@@ -8,8 +8,13 @@
      * tweet controller
      */
     angular.module(globalSettings.appName).controller('tweetController',
-        ['$scope', 'basicControllerService', 'platformModal', 'tweetService', '$translate', '$timeout', '$ionicScrollDelegate',
-            function ($scope, basicControllerService, platformModal, tweetService, $translate, $timeout, $ionicScrollDelegate) {
+        ['$scope', 'basicControllerService', 'platformModal', 'tweetService',
+            '$translate', '$timeout', '$ionicScrollDelegate',
+            function ($scope, basicControllerService, platformModal, tweetService,
+                      $translate, $timeout, $ionicScrollDelegate) {
+
+                //extend basic class
+                basicControllerService.initController($scope);
 
                 //translate
                 $scope.tweetTranslate = {
@@ -44,6 +49,9 @@
                  */
                 $scope.getData = function () {
 
+                    if ($scope.options.type === loadDataType.refresh) {
+                        $scope.showLoading();
+                    }
                     $timeout(function () {
 
                         tweetService.getTweetByPagination($scope.options).then(function (data) {
@@ -58,14 +66,17 @@
                                     $scope.$broadcast('scroll.refreshComplete');
                                     //the first refresh, set the can more tweet true
                                     $scope.moreTweet = true;
+                                    $scope.hideLoading();
                                 }
                                 $ionicScrollDelegate.resize();
                             } else {
                                 $scope.moreTweet = false;
+                                $scope.hideLoading();
                             }
 
                         }, function () {
                             $scope.moreContact = false;
+                            $scope.hideLoading();
                         });
                     }, 3000);
                 };
@@ -82,6 +93,7 @@
                  * refresh
                  */
                 $scope.refresh = function () {
+                    //in case of trigger infinite-scroll
                     $scope.moreTweet = false;
                     $scope.list = [];
                     $scope.options = {
