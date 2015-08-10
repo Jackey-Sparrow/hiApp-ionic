@@ -8,8 +8,8 @@
      * tweet controller
      */
     angular.module(globalSettings.appName).controller('tweetController',
-        ['$scope', 'basicControllerService', 'platformModal', 'tweetService', '$translate', '$timeout',
-            function ($scope, basicControllerService, platformModal, tweetService, $translate, $timeout) {
+        ['$scope', 'basicControllerService', 'platformModal', 'tweetService', '$translate', '$timeout', '$ionicScrollDelegate',
+            function ($scope, basicControllerService, platformModal, tweetService, $translate, $timeout, $ionicScrollDelegate) {
 
                 //translate
                 $scope.tweetTranslate = {
@@ -59,6 +59,7 @@
                                     //the first refresh, set the can more tweet true
                                     $scope.moreTweet = true;
                                 }
+                                $ionicScrollDelegate.resize();
                             } else {
                                 $scope.moreTweet = false;
                             }
@@ -81,7 +82,8 @@
                  * refresh
                  */
                 $scope.refresh = function () {
-                    $scope.list =[];
+                    $scope.moreTweet = false;
+                    $scope.list = [];
                     $scope.options = {
                         pageNumber: 0,
                         pageSize: 10,
