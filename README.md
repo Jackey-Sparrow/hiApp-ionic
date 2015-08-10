@@ -35,8 +35,18 @@ npm install
 
 - configure you gulp configurations
 
-  process : Run->Edit Configurations -> add a new configuration -> select gulp.js
+  ##process :
+
+  ```
+  Run->Edit Configurations -> add a new configuration -> select gulp.js
+  ```
   
-  setting: Gulpfile: D:\Ionic\hiApp-ionic\hiAppGulp.js
-           Node interpreter : C:\Program Files\nodejs\node.exe
-           Gulp package : D:\Ionic\hiApp-ionic\node_modules\gulp
+
+  ##setting:
+
+
+ ```
+ Gulpfile: D:\Ionic\hiApp-ionic\hiAppGulp.js
+ Node interpreter : C:\Program Files\nodejs\node.exe
+ Gulp package : D:\Ionic\hiApp-ionic\node_modules\gulp
+ ```
