@@ -23,3 +23,18 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 - $ionicHistory.goBack() won't remember scroll position unless use css class"button" css='button'
 - ion-infinite-scroll call twice issue: 1 try immediate-check="false" 2 ng-if="!endOfList && items && items.length > 0" 
   3 $ionicScrollDelegate.resize() [this works];
+
+# how to use gulp
+- go to your directory and download the package
+
+```
+
+npm install
+
+```
+
+- configure you gulp configurations
+  process : Run->Edit Configurations -> add a new configuration -> select gulp.js
+  setting: Gulpfile: D:\Ionic\hiApp-ionic\hiAppGulp.js
+           Node interpreter : C:\Program Files\nodejs\node.exe
+           Gulp package : 
