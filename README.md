@@ -16,7 +16,7 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 - use gulp to Compression the code
 - contacts search bar need to optimize
 - performance optimize(including watchers / scope / digest time)
-- cancel add tweet, scroll position lost
+- cancel add tweet(hide $ionicModal), scroll position lost
 
 
 #remark knowledge
