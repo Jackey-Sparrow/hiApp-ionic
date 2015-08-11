@@ -8,10 +8,17 @@
      * contact controller
      */
     angular.module(globalSettings.appName).controller('contactsController',
-        ['$scope', 'contactService', function ($scope, contactService) {
-            $scope.contacts = contactService.all();
-            $scope.remove = function (contact) {
-                contactService.remove(contact);
-            };
-        }]);
+        ['$scope', 'contactService', '$translate',
+            function ($scope, contactService, $translate) {
+
+                $scope.contactsTranslate = {
+                    contactsName: $translate.instant('contacts.contactsName'),
+                    search: $translate.instant('contacts.search')
+                };
+
+                $scope.contacts = contactService.all();
+                $scope.remove = function (contact) {
+                    contactService.remove(contact);
+                };
+            }]);
 })(angular);

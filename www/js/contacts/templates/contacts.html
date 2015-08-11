@@ -1,14 +1,14 @@
-<ion-header-bar class="bar-header bar-light" >
-    <h1 class="title">Contacts</h1>
+<ion-header-bar class="bar-header bar-light">
+    <h1 class="title">{{::contactsTranslate.contactsName}}</h1>
 </ion-header-bar>
 <ion-header-bar class="bar-subheader" style="background-color: #c9c9ce;height: 50px;">
     <div id="search-box" class="bar bar-header item-input-inset">
         <div class="item-input-wrapper">
             <i class="icon ion-search placeholder-icon" on-tap="search()"></i>
-            <input type="search" placeholder="Search" ng-model="options.Pattern"/>
+            <input type="search" placeholder="{{::contactsTranslate.search}}" ng-model="options.Pattern"/>
             <i class="clear-search icon ion-ios7-close-empty"></i>
         </div>
-        <button class="button button-clear" on-tap="search()">Search</button>
+        <button class="button button-clear" on-tap="search()">{{::contactsTranslate.search}}</button>
     </div>
 </ion-header-bar>
 <ion-view view-title="Contacts">

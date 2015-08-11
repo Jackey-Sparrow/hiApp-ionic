@@ -121,7 +121,8 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
                 share: 'Share'
             },
             contacts: {
-                contactsName: 'Contacts'
+                contactsName: 'Contacts',
+                search: 'Search'
             },
             setting: {
                 settingName: 'Setting'
@@ -148,7 +149,8 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
                 share: '分享'
             },
             contacts: {
-                contactsName: '通讯录'
+                contactsName: '通讯录',
+                search: '搜索'
             },
             setting: {
                 settingName: '设置'
