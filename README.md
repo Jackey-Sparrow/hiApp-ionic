@@ -13,6 +13,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - add tweet UI(done)
 - Contact UI
 - Setting UI
+- add tweet comment UI
 - Tweet post(including photo upload)
 - use gulp to Compression the code
 - contacts search bar need to optimize

@@ -1,14 +1,14 @@
 <ion-header-bar class="bar-header bar-light" >
-    <i class="i-button icon ion-ios-arrow-thin-left"></i>
-    <h1 class="title">{{chat.name}}</h1>
+    <i class="button i-button icon ion-ios-arrow-thin-left" on-tap="back()"></i>
+    <h1 class="title">{{contact.name}}</h1>
 </ion-header-bar>
 
-<ion-view view-title="{{chat.name}}">
+<ion-view view-title="{{contact.name}}">
     <ion-content class="padding bg-gray">
-        <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+        <img ng-src="{{contact.face}}" style="width: 64px; height: 64px">
 
         <p>
-            {{chat.lastText}}
+            {{contact.lastText}}
         </p>
     </ion-content>
 </ion-view>

@@ -78,7 +78,7 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
                 }
             })
             .state('tab.contact-detail', {
-                url: '/contacts/:chatId',
+                url: '/contacts/:contactId',
                 views: {
                     'tab-contacts': {
                         templateUrl: 'js/contacts/templates/contact-detail.html',

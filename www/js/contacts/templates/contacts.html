@@ -1,7 +1,7 @@
 <ion-header-bar class="bar-header bar-light" >
     <h1 class="title">Contacts</h1>
 </ion-header-bar>
-<ion-header-bar class="bar-subheader" style="background-color: #c9c9ce;height: 30px;">
+<ion-header-bar class="bar-subheader" style="background-color: #c9c9ce;height: 50px;">
     <div id="search-box" class="bar bar-header item-input-inset">
         <div class="item-input-wrapper">
             <i class="icon ion-search placeholder-icon" on-tap="search()"></i>
@@ -14,16 +14,16 @@
 <ion-view view-title="Contacts">
     <ion-content class="padding bg-gray">
         <ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats"
-                      type="item-text-wrap" href="#/tab/contacts/{{chat.id}}">
-                <img ng-src="{{chat.face}}">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="contact in contacts"
+                      type="item-text-wrap" href="#/tab/contacts/{{contact.id}}">
+                <img ng-src="{{contact.face}}">
 
-                <h2>{{chat.name}}</h2>
+                <h2>{{contact.name}}</h2>
 
-                <p>{{chat.lastText}}</p>
+                <p>{{contact.lastText}}</p>
                 <i class="icon ion-chevron-right icon-accessory"></i>
 
-                <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                <ion-option-button class="button-assertive" ng-click="remove(contact)">
                     Delete
                 </ion-option-button>
             </ion-item>
