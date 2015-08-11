@@ -10,6 +10,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - need a language service(done)
 - localStorage (done)
 - Tweet UI(done)
+- add tweet UI(done)
 - Contact UI
 - Setting UI
 - Tweet post(including photo upload)
@@ -20,6 +21,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - compress the code and upload to ionicview
 - ionic android (not ready)
 - ionic ios(ready)
+- plan to dump $ionicModal
 
 
 #remark knowledge

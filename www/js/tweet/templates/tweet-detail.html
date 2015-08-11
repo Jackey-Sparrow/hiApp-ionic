@@ -2,7 +2,7 @@
     <button class="button i-button icon ion-ios-arrow-thin-left"  on-tap="back()"></button>
 
     <h1 class="title">tweet detail</h1>
-    <i class="i-button icon ion-ios-compose-outline i-header-right" on-tap="modalFn.openModal()"></i>
+    <i class="i-button icon ion-ios-compose-outline i-header-right" on-tap=""></i>
 </ion-header-bar>
 
 <ion-view view-title="Dashboard">
@@ -28,6 +28,31 @@
 
         </div>
 
+        <div class="comments-content">
+            <div class="comment-title">
+                <span class="">Forward&nbsp;&nbsp;|&nbsp;&nbsp;Comment</span>
+                <span class="tip"></span>
+            </div>
+            <ul id="commentContent" class="comments-list">
+
+                <div class="none-comment">
+                    <i class="icon ion-ios-chatboxes-outline"></i>
+                    <p>No one comments</p>
+                </div>
+
+                <li class="comment-item">
+                    <div class="avatar">
+                        <img src="img/avatar/avatar01.jpg" alt="">
+                    </div>
+                    <div class="comment-detail">
+                        <div class="name">Cory Bergman</div>
+                        <div class="text">wow that's some serious chat action</div>
+                        <div class="time"></div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
 
     </ion-content>
 

@@ -16,18 +16,19 @@
     background-color: #ff9500;
 }
 
-.bg-white{
+.bg-white {
     background-color: #ffffff;
 }
-.bg-gray{
+
+.bg-gray {
     background-color: #efeff4;
 }
 
-.bg-light-gray{
+.bg-light-gray {
     background-color: #f9f9f9;
 }
 
-.i-button{
+.i-button {
     width: 34px;
     height: 34px;
     display: block;
@@ -35,16 +36,16 @@
     line-height: 34px;
     text-align: center;
     cursor: pointer;
-    border:none;
+    border: none;
 }
 
-.i-header-right{
+.i-header-right {
     position: absolute;
     right: 0px;
-    top:3px;
+    top: 3px;
 }
 
-.half-image{
+.half-image {
     width: 50%;
     height: 50%;
 }
@@ -79,4 +80,113 @@
 
 ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
     color: #ff9500;
+}
+
+/* tool */
+.message-tool {
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+    background-color: white;
+    margin-top: 1px;
+}
+
+.message-tool ul {
+    width: 100%;
+    height: 100%;
+}
+
+.message-tool ul li {
+    width: 19%;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 25px;
+    line-height: 36px;
+    text-align: center;
+}
+
+/*comment*/
+
+.comments-content {
+    background: #f7f7f7;
+    border: 1px solid #EBE9E9;
+    color: #6d6d72;
+}
+
+.comments-content .comment-title {
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    font-size: 11px;
+    padding-left: 10px;
+    border-bottom: 1px solid #EBE9E9;
+    position: relative;
+}
+
+.comments-content .comment-title .tip {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 13px;
+    left: 48px;
+    border: 9px solid rgba(255, 255, 255, 0);
+    border-bottom: 9px solid #f7f7f7;
+}
+
+.comments-content .comments-list {
+    padding: 0 5px;
+    margin: 0;
+}
+
+.comments-content .comments-list .none-comment {
+    text-align: center;
+    margin-top: 10px;
+    color: #DBDBDB;
+}
+
+.comments-content .comments-list .none-comment > i {
+    display: block;
+    font-size: 75px;
+    margin-left: -15px;
+}
+
+.comments-content .comments-list>li {
+    overflow: hidden;
+    padding: 10px 0;
+    border-bottom: 1px solid #EBE9E9;
+    position: relative;
+}
+
+.comments-content .comments-list .avatar {
+    float: left;
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+}
+
+.comments-content .comments-list .avatar>img {
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+}
+
+.comments-content .comments-list .comment-detail {
+    margin-left: 47px;
+}
+
+.comments-content .comments-list .comment-detail .name {
+    font-size: 12px;
+    margin-top: -2px;
+}
+
+.comments-content .comments-list .comment-detail .text {
+    word-break: break-all;
+    line-height: 14px;
+}
+
+.comments-content .comments-list .comment-detail .time {
+    color: #B6B6B6;
+    font-size: 10px;
+    margin-top: 5px;
 }
