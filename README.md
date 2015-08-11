@@ -20,6 +20,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - performance optimize(including watchers / scope / digest time)
 - cancel add tweet(hide $ionicModal), scroll position lost
 - compress the code and upload to ionicview
+- click photo and expand it
 - ionic android (not ready)
 - ionic ios(ready)
 - plan to dump $ionicModal
