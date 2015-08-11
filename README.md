@@ -18,6 +18,8 @@ all the UI and function will follow [hiApp](http://hi.dearb.me/)
 - performance optimize(including watchers / scope / digest time)
 - cancel add tweet(hide $ionicModal), scroll position lost
 - compress the code and upload to ionicview
+- ionic android (not ready)
+- ionic ios(ready)
 
 
 #remark knowledge
