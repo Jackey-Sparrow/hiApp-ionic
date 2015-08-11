@@ -1,7 +1,7 @@
 # hiApp-ionic
 a hybrid app basic on ionic
 
-all the UI and function will follow [hiApp](http://hi.dearb.me/)
+all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 
 #schedule
 
