@@ -11,19 +11,20 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - localStorage (done)
 - Tweet UI(done)
 - add tweet UI(done)
-- Contact UI
+- Contact UI(done)
+- contacts search bar need to optimize(done,change to height:50px;)
 - Setting UI
+- when no more data, show message 
 - add tweet comment UI
 - Tweet post(including photo upload)
 - use gulp to Compression the code
-- contacts search bar need to optimize
 - performance optimize(including watchers / scope / digest time)
-- cancel add tweet(hide $ionicModal), scroll position lost
+- cancel add tweet(hide $ionicModal), scroll position lost,plan to dump $ionicModal
 - compress the code and upload to ionicview
 - click photo and expand it
 - ionic android (not ready)
 - ionic ios(ready)
-- plan to dump $ionicModal
+
 
 
 #remark knowledge
