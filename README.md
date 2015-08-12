@@ -19,7 +19,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - Tweet post(including photo upload)
 - use gulp to Compression the code
 - performance optimize(including watchers / scope / digest time)
-- cancel add tweet(hide $ionicModal), scroll position lost,plan to dump $ionicModal(use ionModalView directive)
+- cancel add tweet(hide $ionicModal), scroll position lost,plan to dump $ionicModal(use ionModalView directive or $ionicScrollDelegate.scrollTo)
 - compress the code and upload to ionicview
 - click photo and expand it
 - ionic android (not ready)
