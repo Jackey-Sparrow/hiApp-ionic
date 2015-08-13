@@ -50,6 +50,10 @@
     height: 50%;
 }
 
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
 /* login */
 .hiApp-logo {
     width: 100px;
@@ -151,7 +155,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     margin-left: -15px;
 }
 
-.comments-content .comments-list>li {
+.comments-content .comments-list > li {
     overflow: hidden;
     padding: 10px 0;
     border-bottom: 1px solid #EBE9E9;
@@ -165,7 +169,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     border-radius: 3px;
 }
 
-.comments-content .comments-list .avatar>img {
+.comments-content .comments-list .avatar > img {
     height: 35px;
     width: 35px;
     border-radius: 3px;
@@ -189,4 +193,77 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     color: #B6B6B6;
     font-size: 10px;
     margin-top: 5px;
+}
+
+/*setting*/
+.setting-i {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+.feekback {
+    background-color: #38b57f;
+}
+
+.refresh {
+    background-color: #fca405;;
+}
+
+.language {
+    background-color: #9b59b6;
+}
+
+.about {
+    background-color: #5999f3;
+}
+
+.small-item {
+    border-color: #ddd;
+    background-color: #fff;
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 16px;
+    text-decoration: none;
+    height: 50px;
+}
+
+.small-item-avatar{
+    padding-left: 50px;
+    min-height: 50px;
+}
+
+.small-setting-i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 30px;
+    max-height: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+}
+
+.small-item p{
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    text-decoration: none;
 }

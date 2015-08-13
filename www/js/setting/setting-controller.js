@@ -3,10 +3,12 @@
  */
 (function (angular) {
     'use strict';
+    
+    /*
+     * setting controller
+     */
     angular.module(globalSettings.appName)
         .controller('settingController', function ($scope) {
-            $scope.settings = {
-                enableFriends: true
-            };
+
         });
 })(angular);

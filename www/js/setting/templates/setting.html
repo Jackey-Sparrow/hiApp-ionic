@@ -4,10 +4,41 @@
 
 <ion-view view-title="Setting">
     <ion-content class="padding bg-gray">
-        <ion-list>
-            <ion-toggle ng-model="settings.enableFriends">
-                Enable Friends
-            </ion-toggle>
-        </ion-list>
+
+        <div class="list">
+
+            <a class="item item-thumbnail-left" href="#">
+                <img src="img/ionic.png">
+                <h2 style="margin-top: 20px;">Pretty Hate Machine</h2>
+                <p>Nine Inch Nails</p>
+            </a>
+        </div>
+
+        <div class="list">
+
+            <a class="small-item small-item-avatar margin-bottom-10" href="#">
+                <i class="ion-lightbulb small-setting-i feekback"></i>
+                <p>Feekback</p>
+            </a>
+
+            <a class="small-item small-item-avatar margin-bottom-10" href="#">
+                <i class="ion-ios-loop small-setting-i refresh"></i>
+                <p>Update</p>
+            </a>
+
+            <a class="small-item small-item-avatar margin-bottom-10" href="#">
+                <i class="ion-ios-world-outline small-setting-i language"></i>
+                <p>Language</p>
+            </a>
+
+            <a class="small-item small-item-avatar margin-bottom-10" href="#">
+                <i class="ion-ios-information-empty small-setting-i about"></i>
+                <p>About</p>
+            </a>
+        </div>
+
+        <div>
+            <button style="border-radius: 5px;" class="button button-full button-assertive">Log out</button>
+        </div>
     </ion-content>
 </ion-view>

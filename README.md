@@ -13,7 +13,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] add tweet UI(done)
 - [x] Contact UI(done)
 - [x] contacts search bar need to optimize(done,change to height:50px;)
-- [ ] Setting UI
+- [x] Setting UI
 - [ ] when no more data, show message 
 - [ ] add tweet comment UI
 - [ ] Tweet post(including photo upload)
