@@ -18,7 +18,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - add tweet comment UI
 - Tweet post(including photo upload)
 - use gulp to Compression the code
-- performance optimize(including watchers / scope / digest time)
+- performance optimize(including watchers / scope / digest time),should add the function at the beginning
 - compress the code and upload to ionicview
 - click photo and expand it
 - ionic android (not ready)
