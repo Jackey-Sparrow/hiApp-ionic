@@ -1,10 +1,7 @@
-// Ionic Starter App
+/*
+ *　app config
+ */
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
 angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
 
     .run(function ($ionicPlatform) {
@@ -32,12 +29,12 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
         $stateProvider
 
             // setup an abstract state for the tabs directive
+
             .state('login', {
                 url: '/login',
                 templateUrl: 'js/login/templates/login.html',
                 controller: 'loginController'
             })
-
 
             .state('tab', {
                 url: '/tab',
@@ -95,6 +92,16 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
                         controller: 'settingController'
                     }
                 }
+            })
+
+            .state('tab.changeLanguage', {
+                url: '/setting/:changeLanguage',
+                views: {
+                    'tab-setting': {
+                        templateUrl: 'js/language/templates/change-language.html',
+                        controller: 'changeLanguageController'
+                    }
+                }
             });
 
         // if none of the above states are matched, use this as the fallback
@@ -106,6 +113,9 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
 
         //translate
         $translateProvider.translations('en', {
+            common: {
+                systemInfo: 'system info'
+            },
             login: {
                 userName: 'UserName',
                 password: 'Password',
@@ -139,6 +149,10 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
         });
 
         $translateProvider.translations('cn', {
+            common: {
+                systemInfo: '系统消息',
+                about: 'Jackey Sparrow \n  Github:https://github.com/Jackey-Sparrow'
+            },
             login: {
                 userName: '用户名',
                 password: '密码',

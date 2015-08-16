@@ -4,6 +4,9 @@
 (function (angular) {
     'use strict';
 
+    /*
+     * basic controller service
+     */
     angular.module(globalSettings.appName).factory('basicControllerService',
         ['$ionicLoading', '$ionicPopup',
             function ($ionicLoading, $ionicPopup) {
@@ -26,38 +29,24 @@
                         $ionicLoading.hide();
                     };
 
-                    //show dialog
-                    //todo:translate
-                    $scope.showMessage = function () {
+                    /*
+                     * show message
+                     */
+                    $scope.showMessage = function (title, message) {
                         $scope.popUp = $ionicPopup.alert({
-                            title: 'error',
-                            template: '<div class="messageBody">connect error</div>',
+                            title: title,
+                            template: '<div class="messageBody">' + message + '</div>',
                             scope: $scope
                         });
                     };
 
-                    ////modal
-                    //$ionicModal.fromTemplateUrl('js/tweet/templates/add-tweet.html', {
-                    //    scope: $scope,
-                    //    animation: 'slide-in-up'
-                    //}).then(function (modal) {
-                    //    $scope.modal = modal;
-                    //});
-                    //$scope.openModal = function () {
-                    //    $scope.modal.show();
-                    //};
-                    //$scope.closeModal = function () {
-                    //    $scope.modal.hide();
-                    //};
 
                     //destroy
                     $scope.$on('$destroy', function () {
                         if ($scope.popUp) {
                             $scope.popUp.remove();
                         }
-                        //if ($scope.modal) {
-                        //    $scope.modal.remove();
-                        //}
+
                     });
                 };
 
