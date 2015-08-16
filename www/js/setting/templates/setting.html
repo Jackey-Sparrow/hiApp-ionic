@@ -1,5 +1,5 @@
 <ion-header-bar class="bar-header bar-light">
-    <h1 class="title">Setting</h1>
+    <h1 class="title">{{::setting.settingName}}</h1>
 </ion-header-bar>
 
 <ion-view view-title="Setting">
@@ -9,8 +9,10 @@
 
             <a class="item item-thumbnail-left" href="#">
                 <img src="img/ionic.png">
-                <h2 style="margin-top: 20px;">Pretty Hate Machine</h2>
-                <p>Nine Inch Nails</p>
+
+                <h2 style="margin-top: 20px;">{{::setting.userName}}</h2>
+
+                <p>Hi, {{::setting.userName}}</p>
             </a>
         </div>
 
@@ -18,27 +20,31 @@
 
             <a class="small-item small-item-avatar margin-bottom-10" href="#">
                 <i class="ion-lightbulb small-setting-i feekback"></i>
-                <p>Feekback</p>
+
+                <p>{{::setting.feekback}}</p>
             </a>
 
             <a class="small-item small-item-avatar margin-bottom-10" href="#">
                 <i class="ion-ios-loop small-setting-i refresh"></i>
-                <p>Update</p>
+
+                <p>{{::setting.update}}</p>
             </a>
 
             <a class="small-item small-item-avatar margin-bottom-10" href="#">
                 <i class="ion-ios-world-outline small-setting-i language"></i>
-                <p>Language</p>
+
+                <p>{{::setting.language}}</p>
             </a>
 
             <a class="small-item small-item-avatar margin-bottom-10" href="#">
                 <i class="ion-ios-information-empty small-setting-i about"></i>
-                <p>About</p>
+
+                <p>{{::setting.about}}</p>
             </a>
         </div>
 
         <div>
-            <button style="border-radius: 5px;" class="button button-full button-assertive">Log out</button>
+            <button style="border-radius: 5px;" class="button button-full button-assertive">{{::setting.logout}}</button>
         </div>
     </ion-content>
 </ion-view>

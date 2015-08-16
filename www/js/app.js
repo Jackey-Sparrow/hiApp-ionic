@@ -125,7 +125,12 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
                 search: 'Search'
             },
             setting: {
-                settingName: 'Setting'
+                settingName: 'Setting',
+                feekback: 'Feekback',
+                update: 'Update',
+                language: 'Language',
+                about: 'About',
+                logout: 'Log out'
             },
             language: {
                 english: 'English',
@@ -153,7 +158,12 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
                 search: '搜索'
             },
             setting: {
-                settingName: '设置'
+                settingName: '设置',
+                feekback: '意见返馈',
+                update: '检测更新',
+                language: '切换语言',
+                about: '关于我们',
+                logout: '登出'
             },
             language: {
                 english: '英文',
