@@ -1,14 +1,28 @@
 <ion-header-bar class="bar-header bar-light">
-    <button class="button i-button icon ion-ios-arrow-thin-left"  on-tap="back()"></button>
+    <button class="button i-button icon ion-ios-arrow-thin-left" on-tap="back()"></button>
 
     <h1 class="title">language</h1>
-    <i class="i-button icon ion-ios-compose-outline i-header-right" on-tap=""></i>
+    <i class="i-button icon ion-android-done i-header-right" on-tap="done()"></i>
 </ion-header-bar>
 
-<ion-view view-title="change language">
+<ion-view view-title="hiApp">
 
     <ion-content class="padding bg-gray">
 
+        <div style="height: 60px; line-height: 60px;">
+            switch language
+        </div>
+        <div class="list">
+
+            <label class="item item-radio" data-ng-repeat="language in languages">
+                <input type="radio" name="group" value="{{::language.languageTranslate}}" data-ng-checked="{{language.selected}}" data-ng-click="changeLanguage(language.LanguageId)">
+
+                <div class="item-content">
+                    {{::language.LanguageName}}
+                </div>
+                <i class="radio-icon ion-checkmark text-orange"></i>
+            </label>
+        </div>
 
     </ion-content>
 
