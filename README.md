@@ -24,6 +24,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] add tweet comment UI
 - [ ] Tweet post(including photo upload)
 - [ ] use gulp to Compression the code
+- [ ] use gulp-karma to run the test case
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
 - [ ] compress the code and upload to ionicview
 - [ ] click photo and expand it
@@ -34,7 +35,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 
 # issues
 
-- cancel add tweet(hide $ionicModal), scroll position lost,plan to dump $ionicModal(use ionModalView directive or $ionicScrollDelegate.scrollTo)
+add to the github [issue](https://github.com/Jackey-Sparrow/hiApp-ionic/issues)
 
 #remark knowledge
 - $ionicHistory.goBack() won't remember scroll position unless use css class"button" css='button'
