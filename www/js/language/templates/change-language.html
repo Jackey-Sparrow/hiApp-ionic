@@ -15,7 +15,7 @@
         <div class="list">
 
             <label class="item item-radio" data-ng-repeat="language in languages">
-                <input type="radio" name="group" value="{{::language.languageTranslate}}" data-ng-checked="{{language.selected}}" data-ng-click="changeLanguage(language.LanguageId)">
+                <input type="radio" name="group" value="{{::language.languageTranslate}}" data-ng-checked="language.selected" data-ng-click="changeLanguage(language.LanguageId)">
 
                 <div class="item-content">
                     {{::language.LanguageName}}
