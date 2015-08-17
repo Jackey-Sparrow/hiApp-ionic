@@ -2,7 +2,7 @@
 
 [![GitHub issues](https://img.shields.io/github/issues/Jackey-Sparrow/hiApp-ionic.svg?style=flat-square)](https://github.com/Jackey-Sparrow/hiApp-ionic/issues)
 
-a hybrid app basic on ionic
+a hybrid app basic on ionic [online](http://jackey-sparrow.github.io/)
 
 all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 
