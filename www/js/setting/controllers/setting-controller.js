@@ -9,8 +9,8 @@
      */
     angular.module(globalSettings.appName)
         .controller('settingController',
-        ['$scope', 'localStorageService', '$translate', 'basicControllerService',
-            function ($scope, localStorageService, $translate, basicControllerService) {
+        ['$scope', 'localStorageService', '$translate', 'basicControllerService', '$state',
+            function ($scope, localStorageService, $translate, basicControllerService, $state) {
 
                 //extend the basic class
                 basicControllerService.initController($scope);
@@ -38,6 +38,14 @@
                  */
                 $scope.update = function () {
                     $scope.showMessage($scope.setting.systemInfo, 'current version is 0.0.1');
+                };
+
+                /*
+                 * log out
+                 */
+                $scope.logout = function () {
+                    //do your logout logic here
+                    $state.go('login');
                 };
 
                 /*

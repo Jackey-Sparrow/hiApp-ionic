@@ -41,7 +41,7 @@
                 };
 
                 /*
-                 * choose langauge done
+                 * choose language done
                  */
                 $scope.done = function () {
                     window.location.reload(true);
@@ -53,6 +53,8 @@
                     $state.go('tab.setting');
 
                 };
+
+
 
                 /*
                  * go back
