@@ -8,8 +8,8 @@
      * change language controller
      */
     angular.module(globalSettings.appName).controller('changeLanguageController',
-        ['$scope', '$state', 'languageService', 'localStorageService', '$translate',
-            function ($scope, $state, languageService, localStorageService, $translate) {
+        ['$scope', '$state', 'languageService', 'localStorageService', '$translate', '$timeout',
+            function ($scope, $state, languageService, localStorageService, $translate, $timeout) {
 
                 //get language from language service
                 $scope.languages = languageService.getList();
@@ -24,6 +24,9 @@
 
                 //$scope.chooseLanguage = languageService.getLanguageById(languageId);
 
+                /*
+                 * switch language
+                 */
                 $scope.changeLanguage = function (languageId) {
                     $scope.chooseLanguage = languageService.getLanguageById(languageId);
                     $translate.use($scope.chooseLanguage.languageTranslate);
@@ -37,9 +40,18 @@
                     localStorageService.setUserInfo(user);
                 };
 
+                /*
+                 * choose langauge done
+                 */
                 $scope.done = function () {
                     window.location.reload(true);
+                    //$translate.refresh();
+                    //$timeout(function () {
+                    //    $scope.$apply();
+                    //    $state.go('tab.setting');
+                    //});
                     $state.go('tab.setting');
+
                 };
 
                 /*
