@@ -29,7 +29,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] ionic ios(ready)
 - [ ] make the small item to a component
 - [ ] page num and total directive
-- [ ] log out function
+- [x] log out function
 - [ ] implement the online web of this project
 
 # issues
