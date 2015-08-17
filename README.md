@@ -1,9 +1,6 @@
 # hiApp-ionic
 
 [![GitHub issues](https://img.shields.io/github/issues/Jackey-Sparrow/hiApp-ionic.svg?style=flat-square)](https://github.com/Jackey-Sparrow/hiApp-ionic/issues)
-[![GitHub forks](https://img.shields.io/github/forks/Jackey-Sparrow/hiApp-ionic.svg?style=flat-square)](https://github.com/Jackey-Sparrow/hiApp-ionic/network)
-[![GitHub stars](https://img.shields.io/github/stars/Jackey-Sparrow/hiApp-ionic.svg?style=flat-square)](https://github.com/Jackey-Sparrow/hiApp-ionic/stargazers)
-
 
 a hybrid app basic on ionic
 
