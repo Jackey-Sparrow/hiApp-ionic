@@ -30,7 +30,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] make the small item to a component
 - [ ] page num and total directive
 - [x] log out function
-- [ ] implement the online web of this project
+- [x] implement the online web of this project
 
 # issues
 
