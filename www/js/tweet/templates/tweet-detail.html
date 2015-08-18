@@ -2,7 +2,7 @@
     <button class="button i-button icon ion-ios-arrow-thin-left"  on-tap="back()"></button>
 
     <h1 class="title">tweet detail</h1>
-    <i class="i-button icon ion-ios-compose-outline i-header-right" on-tap=""></i>
+    <!--<i class="i-button icon ion-ios-compose-outline i-header-right" on-tap=""></i>-->
 </ion-header-bar>
 
 <ion-view view-title="hiApp">
@@ -30,7 +30,8 @@
 
         <div class="comments-content">
             <div class="comment-title">
-                <span class="">Forward&nbsp;&nbsp;|&nbsp;&nbsp;Comment</span>
+                <span class="">Forward&nbsp;&nbsp;|&nbsp;&nbsp;Comment&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span class="text-orange" on-tap="addComment()">Add Comment +</span></span>
                 <span class="tip"></span>
             </div>
             <ul id="commentContent" class="comments-list">
@@ -40,7 +41,7 @@
                     <p>No one comments</p>
                 </div>
 
-                <li class="comment-item" data-ng-repeat="comment in comments">
+                <li class="comment-item" data-ng-repeat="comment in comments" on-tap="replyComment()">
                     <div class="avatar">
                         <img src="img/avatar/avatar01.jpg" alt="">
                     </div>
