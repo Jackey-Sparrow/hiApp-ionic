@@ -20,8 +20,8 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] implement the online web of this project
 - [x] Setting UI
 - [x] add tweet comment UI
-- [ ] add reply comment use actionSheet
-- [ ] remove the edit icon on the right up corner, and add the add comment iocn on the header of comments
+- [x] add reply comment use actionSheet
+- [x] remove the edit icon on the right up corner, and add the add comment icon on the header of comments
 - [ ] when no more data, show message 
 - [ ] Tweet post(including photo upload)
 - [ ] use gulp to Compression the code
@@ -33,7 +33,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] ionic ios(ready)
 - [ ] make the small item to a component
 - [ ] page num and total directive
-- [ ] conside to use loadin-bar instead of loading-modal
+- [ ] conside to use loading-bar instead of loading-modal
 - [ ] use lazy load to deal with the images
 
 # issues
