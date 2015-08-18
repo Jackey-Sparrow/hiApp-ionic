@@ -35,18 +35,18 @@
             </div>
             <ul id="commentContent" class="comments-list">
 
-                <div class="none-comment">
+                <div class="none-comment" data-ng-show="!hasComments">
                     <i class="icon ion-ios-chatboxes-outline"></i>
                     <p>No one comments</p>
                 </div>
 
-                <li class="comment-item">
+                <li class="comment-item" data-ng-repeat="comment in comments">
                     <div class="avatar">
                         <img src="img/avatar/avatar01.jpg" alt="">
                     </div>
                     <div class="comment-detail">
-                        <div class="name">Cory Bergman</div>
-                        <div class="text">wow that's some serious chat action</div>
+                        <div class="name">{{::comment.userName}}</div>
+                        <div class="text">{{comment.comment}}</div>
                         <div class="time"></div>
                     </div>
                 </li>

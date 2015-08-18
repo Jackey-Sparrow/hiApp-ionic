@@ -8,8 +8,8 @@
      * tweet detail controller
      */
     angular.module(globalSettings.appName).controller('tweetDetailController',
-        ['$scope', '$stateParams', 'tweetService','$ionicHistory','$state',
-            function ($scope, $stateParams, tweetService,$ionicHistory,$state) {
+        ['$scope', '$stateParams', 'tweetService', '$ionicHistory', '$state', 'tweetCommentService',
+            function ($scope, $stateParams, tweetService, $ionicHistory, $state, tweetCommentService) {
 
                 //tweet Id
                 var tweetId = $stateParams.tweetId;
@@ -19,6 +19,17 @@
 
                 //get tweet
                 $scope.tweet = tweetService.getTweetById(parseInt(tweetId));
+
+                //get comments
+                $scope.comments = [];
+                $scope.hasComments = $scope.comments.length;
+
+                tweetCommentService.getCommentByTweetId($scope.tweet.id).then(function (comments) {
+                    $scope.comments = comments;
+                    $scope.hasComments = $scope.comments.length;
+                }, function (error) {
+                    //todo
+                });
 
                 /*
                  * back

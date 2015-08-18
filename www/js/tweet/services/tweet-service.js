@@ -48,7 +48,7 @@
                     start = pageNumber * pageSize,
                     end = (pageNumber + 1) * pageSize,
                     defer = $q.defer();
-                $http.post('js/tweet/tweet.json').then(function (response) {
+                $http.get('js/tweet/tweet.json').then(function (response) {
                     defer.resolve(response.data.slice(start, end));
                 }, function (error) {
                     console.log(error);
