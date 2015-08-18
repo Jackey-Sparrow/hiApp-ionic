@@ -15,10 +15,14 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] Tweet UI(done)
 - [x] add tweet UI(done)
 - [x] Contact UI(done)
-- [x] contacts search bar need to optimize(done,change to height:50px;)
+- [ ] contacts search bar need to optimize(done,change to height:50px;still has some bug)
+- [x] log out function
+- [x] implement the online web of this project
 - [x] Setting UI
+- [x] add tweet comment UI
+- [ ] add reply comment use actionSheet
+- [ ] remove the edit icon on the right up corner, and add the add comment iocn on the header of comments
 - [ ] when no more data, show message 
-- [ ] add tweet comment UI
 - [ ] Tweet post(including photo upload)
 - [ ] use gulp to Compression the code
 - [ ] use gulp-karma to run the test case
@@ -29,9 +33,6 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] ionic ios(ready)
 - [ ] make the small item to a component
 - [ ] page num and total directive
-- [ ] add comment use actionSheet
-- [x] log out function
-- [x] implement the online web of this project
 - [ ] conside to use loadin-bar instead of loading-modal
 - [ ] use lazy load to deal with the images
 
