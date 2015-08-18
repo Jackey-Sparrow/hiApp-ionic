@@ -25,9 +25,11 @@
 
                 <a href="#/tab/tweet/{{tweet.id}}" style="color: #666;text-decoration: none; font-size: 14px;">{{::tweet.content}}</a><br/>
                 <img class="half-image" data-ng-repeat="photo in tweet.photos" src="{{photo}}">
+
                 <p>
                     <a href="#" class="subdued">{{::tweet.likes}} {{::tweetTranslate.like}}</a>
-                    <a href="#/tab/tweet/{{tweet.id}}" class="subdued">{{::tweet.comments}} {{::tweetTranslate.comments}}</a>
+                    <a href="#/tab/tweet/{{tweet.id}}" class="subdued">{{::tweet.comments}}
+                        {{::tweetTranslate.comments}}</a>
                 </p>
             </div>
 
@@ -36,7 +38,7 @@
                     <i class="icon ion-thumbsup"></i>
                     {{::tweetTranslate.like}}
                 </a>
-                <a class="tab-item" href="#">
+                <a class="tab-item" href="#/tab/tweet/{{tweet.id}}">
                     <i class="icon ion-chatbox"></i>
                     {{::tweetTranslate.comment}}
                 </a>
