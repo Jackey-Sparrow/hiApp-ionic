@@ -32,6 +32,8 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] add comment use actionSheet
 - [x] log out function
 - [x] implement the online web of this project
+- [ ] conside to use loadin-bar instead of loading-modal
+- [ ] use lazy load to deal with the images
 
 # issues
 
