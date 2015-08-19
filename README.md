@@ -22,13 +22,12 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] add tweet comment UI
 - [x] add reply comment use actionSheet
 - [x] remove the edit icon on the right up corner, and add the add comment icon on the header of comments
-- [ ] $ionicModal hide still lost the scroll position
+- [x] $ionicModal hide still lost the scroll position
 - [ ] when no more data, show message 
 - [ ] Tweet post(including photo upload)
-- [ ] use gulp to Compression the code
+- [x] use gulp to Compression the code(in jackey-sparrow.github.io project)
 - [ ] use gulp-karma to run the test case
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
-- [ ] compress the code and upload to ionicview
 - [ ] click photo and expand it(Add photo browser directive)
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
@@ -41,10 +40,6 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 
 add to the github [issue](https://github.com/Jackey-Sparrow/hiApp-ionic/issues)
 
-#remark knowledge
-- $ionicHistory.goBack() won't remember scroll position unless use css class"button" css='button'
-- ion-infinite-scroll call twice issue: 1 try immediate-check="false" 2 ng-if="!endOfList && items && items.length > 0" 
-  3 $ionicScrollDelegate.resize() [this works];
 
 # use gulp
 - go to your directory and download the package
