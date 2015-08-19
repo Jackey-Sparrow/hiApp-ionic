@@ -18,5 +18,4 @@ angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate', 'ioni
                 StatusBar.styleLightContent();
             }
         });
-    })
-;
+    });
