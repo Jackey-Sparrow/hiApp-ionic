@@ -29,7 +29,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] use gulp-karma to run the test case
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
 - [ ] compress the code and upload to ionicview
-- [ ] click photo and expand it
+- [ ] click photo and expand it(Add photo browser directive)
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
 - [ ] make the small item to a component
