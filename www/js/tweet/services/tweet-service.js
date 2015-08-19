@@ -10,7 +10,25 @@
     angular.module(globalSettings.appName).factory('tweetService',
         ['$q', '$http', function ($q, $http) {
             var service = {},
-                list = [];
+                list = [],
+                scrollPosition = {
+                    left: 0,
+                    top: 0
+                };
+
+            /*
+             * store scroll position
+             */
+            service.setScrollPosition = function (position) {
+                scrollPosition = position;
+            };
+
+            /*
+             * get scroll position
+             */
+            service.getScrollPosition = function () {
+                return scrollPosition;
+            };
 
             /*
              * set tweet list
