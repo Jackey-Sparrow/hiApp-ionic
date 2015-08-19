@@ -72,3 +72,8 @@ npm install
  Node interpreter : C:\Program Files\nodejs\node.exe
  Gulp package : D:\Ionic\hiApp-ionic\node_modules\gulp
  ```
+ 
+ 
+ # latest ionic download 
+ 
+ [ionicframwork](http://code.ionicframework.com/#)
