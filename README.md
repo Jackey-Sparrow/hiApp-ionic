@@ -22,6 +22,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] add tweet comment UI
 - [x] add reply comment use actionSheet
 - [x] remove the edit icon on the right up corner, and add the add comment icon on the header of comments
+- [ ] $ionicModal hide still lost the scroll position
 - [ ] when no more data, show message 
 - [ ] Tweet post(including photo upload)
 - [ ] use gulp to Compression the code
