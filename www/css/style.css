@@ -200,20 +200,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 }
 
 /*setting*/
-.setting-i {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    max-width: 40px;
-    max-height: 40px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    font-size: 28px;
-    line-height: 40px;
-    text-align: center;
-    color: white;
-}
+
 
 .feekback {
     background-color: #38b57f;

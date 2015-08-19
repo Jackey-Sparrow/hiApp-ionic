@@ -1,0 +1,57 @@
+/*setting*/
+.small-item {
+    border-color: #ddd;
+    background-color: #fff;
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 16px;
+    text-decoration: none;
+    height: 50px;
+}
+
+.small-item-avatar {
+    padding-left: 50px;
+    min-height: 50px;
+}
+
+.small-item .small-setting-i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 30px;
+    max-height: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+}
+
+.small-item p {
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.feekback {
+    background-color: #38b57f;
+}
+
+.refresh {
+    background-color: #fca405;;
+}
+
+.language {
+    background-color: #9b59b6;
+}
+
+.about {
+    background-color: #5999f3;
+}

@@ -2,7 +2,7 @@
  *　app config
  */
 
-angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate'])
+angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate', 'ionic.extension'])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
