@@ -109,6 +109,7 @@
                  */
                 $scope.modalFn = {
                     openModal: function () {
+                        $ionicScrollDelegate.freezeScroll();
                         platformModal.openModal({
                             templateUrl: 'js/tweet/templates/add-tweet.html',
                             scope: $scope
