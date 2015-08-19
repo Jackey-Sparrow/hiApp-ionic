@@ -109,7 +109,6 @@
                  */
                 $scope.modalFn = {
                     openModal: function () {
-
                         tweetService.setScrollPosition($ionicScrollDelegate.getScrollPosition());
                         platformModal.openModal({
                             templateUrl: 'js/tweet/templates/add-tweet.html',
@@ -122,9 +121,7 @@
                         $timeout(function () {
                             $ionicScrollDelegate.scrollTo(scrollPosition.left, scrollPosition.top, true);
                         });
-
                     }
-
                 };
 
 
