@@ -28,7 +28,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] page num and total directive
 - [ ] use lazy load to deal with the images
 - [ ] Tweet post(including photo upload)
-- [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)
+- [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [ ] use gulp-karma to run the test case
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
 - [ ] click photo and expand it(Add photo browser directive)
