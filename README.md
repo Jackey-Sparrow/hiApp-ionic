@@ -36,7 +36,8 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] ionic ios(ready)
 - [ ] conside to use loading-bar instead of loading-modal
 - [ ] after finish the implement, add a build version
-- 
+- [ ] use gulp to auto general index.html, no need to inject the scrict url by hand
+
 # issues
 
 add to the github [issue](https://github.com/Jackey-Sparrow/hiApp-ionic/issues)
