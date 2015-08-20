@@ -7,14 +7,16 @@
      * add comment controller
      */
     angular.module(globalSettings.appName).controller('addCommentController',
-        ['$scope', function ($scope) {
-            $scope.title = 'add comment';
+        ['$scope', '$translate',
+            function ($scope, $translate) {
+                $scope.title = $translate.instant('tweet.addComment');
+                $scope.commentText = $translate.instant('tweet.commentText');
 
-            /*
-             * back
-             */
-            $scope.back = function () {
-                $scope.modalFn.hideModal();
-            };
-        }]);
+                /*
+                 * back
+                 */
+                $scope.back = function () {
+                    $scope.modalFn.hideModal();
+                };
+            }]);
 })(angular);

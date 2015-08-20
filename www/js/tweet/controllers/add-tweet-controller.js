@@ -7,14 +7,17 @@
      * add tweet controller
      */
     angular.module(globalSettings.appName).controller('addTweetController',
-        ['$scope', function ($scope) {
-            $scope.title = 'add tweet';
+        ['$scope', '$translate',
+            function ($scope, $translate) {
 
-            /*
-             * back
-             */
-            $scope.back = function () {
-                $scope.modalFn.hideModal();
-            };
-        }]);
+                $scope.title = $translate.instant('tweet.addTweet');
+                $scope.somethingNew = $translate.instant('tweet.somethingNew');
+
+                /*
+                 * back
+                 */
+                $scope.back = function () {
+                    $scope.modalFn.hideModal();
+                };
+            }]);
 })(angular);

@@ -1,7 +1,7 @@
 <ion-header-bar class="bar-header bar-light">
     <button class="button i-button icon ion-ios-arrow-thin-left" on-tap="back()"></button>
 
-    <h1 class="title">language</h1>
+    <h1 class="title">{{::languageTranslate.title}}</h1>
     <i class="i-button icon ion-android-done i-header-right" on-tap="done()"></i>
 </ion-header-bar>
 
@@ -10,12 +10,13 @@
     <ion-content class="padding bg-gray">
 
         <div style="height: 60px; line-height: 60px;">
-            switch language
+            {{::languageTranslate.switchLanguage}}
         </div>
         <div class="list">
 
             <label class="item item-radio" data-ng-repeat="language in languages">
-                <input type="radio" name="group" value="{{::language.languageTranslate}}" data-ng-checked="language.selected" data-ng-click="changeLanguage(language.LanguageId)">
+                <input type="radio" name="group" value="{{::language.languageTranslate}}"
+                       data-ng-checked="language.selected" data-ng-click="changeLanguage(language.LanguageId)">
 
                 <div class="item-content">
                     {{::language.LanguageName}}

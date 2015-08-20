@@ -2,11 +2,11 @@
     <ion-header-bar class="bar-header bar-light">
         <i class="i-button icon ion-ios-arrow-thin-left" on-tap="back()"></i>
 
-        <h1 class="title">Add Tweet</h1>
+        <h1 class="title">{{::title}}</h1>
         <i class="i-button icon ion-android-done i-header-right" on-tap="openModal()"></i>
     </ion-header-bar>
     <ion-content class="bg-gray">
-        <textarea rows="8" style="width:100%;margin-top: 1px;padding: 5px;" placeholder="What's new with you"></textarea>
+        <textarea rows="8" style="width:100%;margin-top: 1px;padding: 5px;" placeholder="{{::somethingNew}}"></textarea>
         <div class="message-tool">
             <ul>
                 <li class="ion-camera"></li>

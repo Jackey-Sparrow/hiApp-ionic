@@ -10,13 +10,24 @@
     angular.module(globalSettings.appName).controller('tweetDetailController',
         ['$scope', '$stateParams', 'tweetService', '$ionicHistory', '$state',
             'tweetCommentService', '$ionicActionSheet', '$timeout',
-            'basicControllerService', 'platformModal', 'tweetDetailService', '$ionicScrollDelegate',
+            'basicControllerService', 'platformModal', 'tweetDetailService',
+            '$ionicScrollDelegate', '$translate',
             function ($scope, $stateParams, tweetService, $ionicHistory, $state,
                       tweetCommentService, $ionicActionSheet, $timeout,
-                      basicControllerService, platformModal, tweetDetailService, $ionicScrollDelegate) {
+                      basicControllerService, platformModal, tweetDetailService,
+                      $ionicScrollDelegate, $translate) {
 
                 //extend basic class
                 basicControllerService.initController($scope);
+
+                //translate
+                $scope.tweetDetailTranslate = {
+                    title: $translate.instant('tweet.tweetDetail'),
+                    comment: $translate.instant('tweet.comment'),
+                    forward: $translate.instant('tweet.forward'),
+                    addComment: $translate.instant('tweet.addComment'),
+                    noComment: $translate.instant('tweet.noComment')
+                };
 
                 //tweet Id
                 var tweetId = $stateParams.tweetId;
@@ -77,17 +88,20 @@
                 /*
                  * reply comment
                  */
+                var reply = $translate.instant('tweet.reply'),
+                    copy = $translate.instant('tweet.copy'),
+                    cancel = $translate.instant('tweet.cancel');
                 $scope.replyComment = function () {
 
                     // Show the action sheet
                     var hideSheet = $ionicActionSheet.show({
                         buttons: [
-                            {text: 'Reply'},
-                            {text: 'Copy'}
+                            {text: reply},
+                            {text: copy}
                         ],
                         //destructiveText: 'Delete',
                         //titleText: 'Modify your album',
-                        cancelText: 'Cancel',
+                        cancelText: cancel,
                         cancel: function () {
                             // add cancel code..
                         },

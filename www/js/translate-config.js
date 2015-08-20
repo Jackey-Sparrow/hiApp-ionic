@@ -23,7 +23,17 @@
                 like: 'Like',
                 comments: 'Comments',
                 comment: 'Comment',
-                share: 'Share'
+                share: 'Share',
+                addTweet: 'Add Tweet',
+                somethingNew: 'What\'s new with you',
+                tweetDetail: 'Tweet Detail',
+                forward: 'Forward',
+                addComment: 'Add Comment',
+                noComment: 'No one comments',
+                commentText: 'write a comment',
+                reply: 'Reply',
+                copy: 'Copy',
+                cancel: 'Cancel'
             },
             contacts: {
                 contactsName: 'Contacts',
@@ -39,7 +49,9 @@
             },
             language: {
                 english: 'English',
-                chinese: 'Chinese'
+                chinese: 'Chinese',
+                title: 'Language',
+                switchLanguage: 'switch Language'
             }
         });
 
@@ -60,7 +72,17 @@
                 like: '赞',
                 comments: '评论',
                 comment: '评论',
-                share: '分享'
+                share: '分享',
+                addTweet: '添加推特',
+                somethingNew: '分享新鲜事',
+                tweetDetail: '具体内容',
+                forward: '转发',
+                addComment: '添加评论',
+                noComment: '暂无评论',
+                commentText: '写一个评论',
+                reply: '回复评论',
+                copy: '复制',
+                cancel: '取消'
             },
             contacts: {
                 contactsName: '通讯录',
@@ -76,7 +98,9 @@
             },
             language: {
                 english: '英文',
-                chinese: '中文'
+                chinese: '中文',
+                title: '语言',
+                switchLanguage: '转换语言'
             }
         });
 

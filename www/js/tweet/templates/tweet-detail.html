@@ -1,7 +1,7 @@
 <ion-header-bar class="bar-header bar-light">
-    <button class="button i-button icon ion-ios-arrow-thin-left"  on-tap="back()"></button>
+    <button class="button i-button icon ion-ios-arrow-thin-left" on-tap="back()"></button>
 
-    <h1 class="title">tweet detail</h1>
+    <h1 class="title">{{::tweetDetailTranslate.tweetDetail}}</h1>
     <!--<i class="i-button icon ion-ios-compose-outline i-header-right" on-tap=""></i>-->
 </ion-header-bar>
 
@@ -30,15 +30,16 @@
 
         <div class="comments-content">
             <div class="comment-title">
-                <span class="">Forward&nbsp;&nbsp;|&nbsp;&nbsp;Comment&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <span class="text-orange" on-tap="modalFn.openModal()">Add Comment +</span></span>
+                <span class="">{{::tweetDetailTranslate.forward}}&nbsp;&nbsp;|&nbsp;&nbsp;{{::tweetDetailTranslate.comment}}&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span class="text-orange" on-tap="modalFn.openModal()">{{::tweetDetailTranslate.addComment}}+</span></span>
                 <span class="tip"></span>
             </div>
             <ul id="commentContent" class="comments-list">
 
                 <div class="none-comment" data-ng-show="!hasComments">
                     <i class="icon ion-ios-chatboxes-outline"></i>
-                    <p>No one comments</p>
+
+                    <p>{{::tweetDetailTranslate.noComment}}</p>
                 </div>
 
                 <li class="comment-item" data-ng-repeat="comment in comments" on-tap="replyComment()">

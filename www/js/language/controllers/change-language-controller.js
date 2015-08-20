@@ -15,6 +15,13 @@
                 $scope.languages = languageService.getList();
                 //$scope.languageId = $scope.languages[0].LanguageId;
 
+                //translate
+                $scope.languageTranslate = {
+                    title: $translate.instant('language.title'),
+                    switchLanguage: $translate.instant('language.switchLanguage')
+
+                };
+
                 //get localStorage userInfo
                 var user = localStorageService.getUserInfo();
                 if (!user) {
@@ -45,16 +52,9 @@
                  */
                 $scope.done = function () {
                     window.location.reload(true);
-                    //$translate.refresh();
-                    //$timeout(function () {
-                    //    $scope.$apply();
-                    //    $state.go('tab.setting');
-                    //});
                     $state.go('tab.setting');
 
                 };
-
-
 
                 /*
                  * go back
