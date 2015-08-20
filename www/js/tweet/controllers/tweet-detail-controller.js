@@ -10,8 +10,13 @@
     angular.module(globalSettings.appName).controller('tweetDetailController',
         ['$scope', '$stateParams', 'tweetService', '$ionicHistory', '$state',
             'tweetCommentService', '$ionicActionSheet', '$timeout',
+            'basicControllerService', 'platformModal', 'tweetDetailService', '$ionicScrollDelegate',
             function ($scope, $stateParams, tweetService, $ionicHistory, $state,
-                      tweetCommentService, $ionicActionSheet, $timeout) {
+                      tweetCommentService, $ionicActionSheet, $timeout,
+                      basicControllerService, platformModal, tweetDetailService, $ionicScrollDelegate) {
+
+                //extend basic class
+                basicControllerService.initController($scope);
 
                 //tweet Id
                 var tweetId = $stateParams.tweetId;
@@ -43,8 +48,30 @@
                 /*
                  * add comment
                  */
-                $scope.addComment = function () {
-                    //todo
+                //$scope.addComment = function () {
+                //todo
+                //};
+
+                /*
+                 * add tweet modal
+                 */
+                $scope.modalFn = {
+                    openModal: function () {
+                        //store the scroll position
+                        tweetDetailService.setScrollPosition($ionicScrollDelegate.getScrollPosition());
+                        platformModal.openModal({
+                            templateUrl: 'js/tweet/templates/add-comment.html',
+                            scope: $scope
+                        });
+                    },
+                    hideModal: function () {
+                        platformModal.hideModal();
+                        var scrollPosition = tweetDetailService.getScrollPosition();
+                        //set the scroll position back
+                        $timeout(function () {
+                            $ionicScrollDelegate.scrollTo(scrollPosition.left, scrollPosition.top, true);
+                        });
+                    }
                 };
 
                 /*
