@@ -26,7 +26,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] add tweet comment UI(high)
 - [ ] when no more data, show message (high)
 - [ ] page num and total directive
-- [ ] use lazy load to deal with the images
+- [ ] use lazy load to deal with the images(ocLazyLoad)
 - [ ] Tweet post(including photo upload)
 - [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [ ] use gulp-karma to run the test case
