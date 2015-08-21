@@ -25,7 +25,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] make the small item to a component
 - [x] add tweet comment UI(high)
 - [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
-- [ ] new a fold name 'app' to keep the platform code
+- [ ] new a fold name 'app' to keep the platform code (high)
 - [ ] when no more data, show message (high,make a info directive)
 - [ ] page num and total directive(high)
 - [ ] use lazy load to deal with the images(ocLazyLoad)
