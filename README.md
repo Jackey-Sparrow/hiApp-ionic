@@ -27,13 +27,13 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [ ] new a fold name 'app' to keep the platform code (high)
 - [ ] page num and total directive(high)
-- [ ] use scss
-- [ ] when no more data, show message (high,make a info directive)
+- [ ] click photo and expand it(Add photo browser directive, create a modal to show the image)(high)
+- [ ] when no more data, show message (high,make a info directive)(high)
 - [ ] use lazy load to deal with the images(ocLazyLoad)
+- [ ] use scss
 - [ ] use h5 to implement map
 - [ ] Tweet post(including photo upload)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
-- [ ] click photo and expand it(Add photo browser directive, create a modal to show the image)
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
 - [ ] conside to use loading-bar instead of loading-modal(may be not)
