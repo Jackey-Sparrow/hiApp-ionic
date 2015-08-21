@@ -33,7 +33,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] use h5 to implement map
 - [ ] Tweet post(including photo upload)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
-- [ ] click photo and expand it(Add photo browser directive)
+- [ ] click photo and expand it(Add photo browser directive, create a modal to show the image)
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
 - [ ] conside to use loading-bar instead of loading-modal(may be not)
