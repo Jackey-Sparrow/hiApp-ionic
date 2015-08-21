@@ -24,6 +24,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] $ionicModal hide still lost the scroll position
 - [x] make the small item to a component
 - [x] add tweet comment UI(high)
+- [ ] new a fold name 'app' to keep the platform code
 - [ ] when no more data, show message (high)
 - [ ] page num and total directive
 - [ ] use lazy load to deal with the images(ocLazyLoad)
