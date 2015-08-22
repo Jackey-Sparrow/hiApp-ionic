@@ -9,8 +9,8 @@
      */
     angular.module(globalSettings.appName)
         .controller('settingController',
-        ['$scope', 'localStorageService', '$translate', 'basicControllerService', '$state',
-            function ($scope, localStorageService, $translate, basicControllerService, $state) {
+        ['$scope', 'localStorageService', '$translate', 'basicControllerService', '$state', '$ionicAlert',
+            function ($scope, localStorageService, $translate, basicControllerService, $state, $ionicAlert) {
 
                 //extend the basic class
                 basicControllerService.initController($scope);
@@ -46,6 +46,10 @@
                 $scope.logout = function () {
                     //do your logout logic here
                     $state.go('login');
+                };
+
+                $scope.feekback = function () {
+                    $ionicAlert.alert($scope, 'hi', 'message');
                 };
 
                 /*
