@@ -36,7 +36,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
-- [ ] conside to use loading-bar instead of loading-modal(may be not)
+- [x] not goning to use loading-bar
 - [ ] use gulp-karma to run the test case
 - [ ] after finish the implement, add a build version
 - [ ] use gulp to auto general index.html, no need to inject the script url by hand
