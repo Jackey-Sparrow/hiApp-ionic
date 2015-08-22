@@ -9,25 +9,7 @@
      */
     angular.module(globalSettings.appName).factory('tweetDetailService',
         [function () {
-            var service = {},
-                scrollPosition = {
-                    top: 0,
-                    left: 0
-                };
-
-            /*
-             * set scroll position
-             */
-            service.setScrollPosition = function (position) {
-                scrollPosition = position;
-            };
-
-            /*
-             * get scroll position
-             */
-            service.getScrollPosition = function () {
-                return scrollPosition;
-            };
+            var service = {};
 
             return service;
         }]);

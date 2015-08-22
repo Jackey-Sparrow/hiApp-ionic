@@ -10,12 +10,10 @@
     angular.module(globalSettings.appName).controller('tweetDetailController',
         ['$scope', '$stateParams', 'tweetService', '$ionicHistory', '$state',
             'tweetCommentService', '$ionicActionSheet', '$timeout',
-            'basicControllerService', 'platformModal', 'tweetDetailService',
-            '$ionicScrollDelegate', '$translate',
+            'basicControllerService', 'platformModal', 'tweetDetailService', '$translate',
             function ($scope, $stateParams, tweetService, $ionicHistory, $state,
                       tweetCommentService, $ionicActionSheet, $timeout,
-                      basicControllerService, platformModal, tweetDetailService,
-                      $ionicScrollDelegate, $translate) {
+                      basicControllerService, platformModal, tweetDetailService, $translate) {
 
                 //extend basic class
                 basicControllerService.initController($scope);
@@ -68,8 +66,6 @@
                  */
                 $scope.modalFn = {
                     openModal: function () {
-                        //store the scroll position
-                        tweetDetailService.setScrollPosition($ionicScrollDelegate.getScrollPosition());
                         platformModal.openModal({
                             templateUrl: 'js/tweet/templates/add-comment.html',
                             scope: $scope
@@ -77,11 +73,6 @@
                     },
                     hideModal: function () {
                         platformModal.hideModal();
-                        var scrollPosition = tweetDetailService.getScrollPosition();
-                        //set the scroll position back
-                        $timeout(function () {
-                            $ionicScrollDelegate.scrollTo(scrollPosition.left, scrollPosition.top, true);
-                        });
                     }
                 };
 

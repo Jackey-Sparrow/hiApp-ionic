@@ -46,7 +46,9 @@
                      * destroy
                      */
                     scope.$on('$destroy', function () {
-                        scope.modal.remove();
+                        if(scope.modal){
+                            scope.modal.remove();
+                        }
                         element.unbind('click');
                     });
                 }
