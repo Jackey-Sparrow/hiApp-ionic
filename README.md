@@ -30,7 +30,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] click photo and expand it(Add photo browser directive, create a modal to show the image)(high)
 - [ ] when no more data, show message (high,make a info directive)(high)
 - [ ] use lazy load to deal with the images(ocLazyLoad)
-- [ ] use scss
+- [x] use scss(not going to use)
 - [ ] use h5 to implement map
 - [ ] Tweet post(including photo upload)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
