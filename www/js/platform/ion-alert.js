@@ -4,6 +4,11 @@
 (function (angular) {
     'use strict';
 
+    /*
+     * ionicAlert factory
+     *
+     * this alert dialog will display after 3 seconds
+     */
     angular.module('ionic.extension').factory('$ionicAlert',
         ['$ionicPopup', '$timeout',
             function ($ionicPopup, $timeout) {
@@ -16,9 +21,7 @@
                         title: title,
                         scope: scope
                     });
-                    //myPopup.then(function (res) {
-                    //    console.log('Tapped!', res);
-                    //});
+                   
                     $timeout(function () {
                         myPopup.close();
                     }, 3000);
