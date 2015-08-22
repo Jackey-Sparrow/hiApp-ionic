@@ -21,7 +21,7 @@
                         title: title,
                         scope: scope
                     });
-                   
+
                     $timeout(function () {
                         myPopup.close();
                     }, 3000);
