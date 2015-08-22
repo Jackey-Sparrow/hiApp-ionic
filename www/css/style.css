@@ -258,3 +258,12 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     line-height: 50px;
     text-decoration: none;
 }
+
+
+/*picture browser*/
+
+.picture-browser{
+    width:90%;
+    margin: 0 auto;
+    display: block;
+}

@@ -4,50 +4,65 @@
 (function (angular) {
     'use strict';
 
+    /*
+     * ion picture browser
+     *
+     * @example
+     *
+     * <img src='' ion-picture-browser>
+     */
     angular.module('ionic.extension').directive('ionPictureBrowser',
-        ['$ionicModal','$ionicPopover', function ($ionicModal,$ionicPopover) {
+        ['$ionicModal', function ($ionicModal) {
             return {
                 restrict: 'A',
                 scope: {},
-                link: function (scope, element, link) {
+                link: function (scope, element, attr) {
 
-                    $ionicModal.fromTemplateUrl('js/platform/templates/ion-picture-browser.html', {
-                        scope: scope,
-                        animation: 'slide-in-up'
-                    }).then(function (modal) {
-                        scope.modal = modal;
-                    });
-
-                    //$ionicPopup.show({
-                    //    templateUrl:'js/platform/templates/ion-picture-browser.html',
-                    //    scope:scope
-                    //});
-
-                    $ionicPopover.fromTemplateUrl('js/platform/templates/ion-picture-browser.html', {
-                        scope: scope
-                    }).then(function(popover) {
-                        scope.popover = popover;
-                    });
-
+                    //element bind click event
                     element.bind('click', function () {
-                        console.log('click');
-                        //scope.modal.show();
-                        scope.popover.show();
-
+                        $ionicModal.fromTemplateUrl('js/platform/templates/ion-picture-browser.html', {
+                            scope: scope,
+                            animation: 'animated zoomInUp',
+                            hideDelay: 1020
+                        }).then(function (modal) {
+                            scope.modal = modal;
+                            scope.modal.show();
+                        });
                     });
 
+
+                    /*
+                     * hide modal
+                     */
+                    scope.pictureBrowser = {
+                        hide: function () {
+                            scope.modal.hide();
+                            scope.modal.remove();
+                        },
+                        imgUrl: attr.src
+                    };
+
+                    /*
+                     * destroy
+                     */
                     scope.$on('$destroy', function () {
                         scope.modal.remove();
-                        scope.popover.remove();
+                        element.unbind('click');
                     });
-
                 }
             };
         }]);
 
+    /*
+     * picture browser controller
+     */
     angular.module('ionic.extension').controller('pictureBrowserController',
         ['$scope',
             function ($scope) {
+                $scope.back = function () {
+                    $scope.pictureBrowser.hide();
+                };
 
+                $scope.imgUrl = $scope.pictureBrowser.imgUrl;
             }]);
 })(angular);
