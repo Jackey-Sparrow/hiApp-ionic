@@ -37,7 +37,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
 - [x] not goning to use loading-bar
-- [ ] use gulp-karma to run the test case
+- [ ] use gulp-karma to run the test case(not going to write the test case)
 - [ ] after finish the implement, add a build version
 - [ ] use gulp to auto general index.html, no need to inject the script url by hand
 
