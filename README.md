@@ -27,7 +27,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [x] new a fold name 'app' to keep the platform code (high)
 - [x] page num and total directive(high)
-- [x] click photo and expand it(Add photo browser directive, create a modal to show the image)(high)
+- [x] picture browser directive
 - [ ] when no more data, show message (high,make a info directive)(high)
 - [ ] use lazy load to deal with the images(ocLazyLoad)
 - [x] use scss(not going to use)
