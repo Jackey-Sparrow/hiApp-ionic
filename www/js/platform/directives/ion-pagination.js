@@ -4,18 +4,28 @@
 (function (angular) {
     'use strict';
 
+    /*
+     * ionPagination
+     *
+     * @example
+     *
+     * <ion-view></ion-view>
+     *
+     *
+     * <div data-ion-pagination data-current-count="currentCount" data-total-count="totalCount" class="text-orange"></div>
+     *
+     * ps: put it under the ion-view
+     * @example
+     */
     angular.module('ionic.extension').directive('ionPagination', [function () {
         return {
-            restrict: 'A',
+            restrict: 'AE',
             replace: true,
             scope: {
                 totalCount: '=',
                 currentCount: '='
             },
-            template:'<div>789</div>',
-            link: function () {
-
-            }
+            template:'<p class="ionPagination ">{{currentCount}} / {{totalCount}}</p>'
         };
     }]);
 })(angular);

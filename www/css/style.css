@@ -54,7 +54,7 @@
     margin-bottom: 10px;
 }
 
-.messageBody{
+.messageBody {
     text-align: center;
     min-height: 50px;
 }
@@ -202,7 +202,6 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 
 /*setting*/
 
-
 .feekback {
     background-color: #38b57f;
 }
@@ -233,7 +232,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     height: 50px;
 }
 
-.small-item-avatar{
+.small-item-avatar {
     padding-left: 50px;
     min-height: 50px;
 }
@@ -253,10 +252,20 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     color: white;
 }
 
-.small-item p{
+.small-item p {
     height: 50px;
     display: block;
     line-height: 50px;
     text-decoration: none;
 }
 
+/* ionPagination*/
+.ionPagination {
+    position: absolute;
+    bottom: 50px;
+    z-index: 99;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+}

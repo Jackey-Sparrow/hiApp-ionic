@@ -49,7 +49,12 @@
                     end = (pageNumber + 1) * pageSize,
                     defer = $q.defer();
                 $http.get('js/tweet/tweet.json').then(function (response) {
-                    defer.resolve(response.data.slice(start, end));
+                    var len = response.data.length,
+                        result = {
+                            totalCount:len,
+                            main:response.data.slice(start, end)
+                        };
+                    defer.resolve(result);
                 }, function (error) {
                     console.log(error);
                 });

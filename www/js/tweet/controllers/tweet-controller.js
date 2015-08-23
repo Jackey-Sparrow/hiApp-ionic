@@ -43,6 +43,8 @@
 
                 //tweet list
                 $scope.list = [];
+                $scope.currentCount = $scope.list.length;
+                $scope.totalCount = 0;
 
                 /*
                  * get data
@@ -54,10 +56,13 @@
                     }
                     $timeout(function () {
 
-                        tweetService.getTweetByPagination($scope.options).then(function (data) {
+                        tweetService.getTweetByPagination($scope.options).then(function (result) {
+                            var data = result.main;
                             if (data.length) {
                                 $scope.options.pageNumber++;
                                 $scope.list = $scope.list.concat(data);
+                                $scope.currentCount = $scope.list.length;
+                                $scope.totalCount = result.totalCount;
                                 //store tweet list
                                 tweetService.setList($scope.list);
                                 if ($scope.options.type === loadDataType.loadMore) {
