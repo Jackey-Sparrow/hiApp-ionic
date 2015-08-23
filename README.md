@@ -29,6 +29,8 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] picture browser directive
 - [x] when no more data, show message
 - [x] use scss(not going to use)
+- [x] not goning to use loading-bar
+- [x] use gulp-karma to run the test case(not going to write the test case)
 - [ ] use lazy load to deal with the images(ocLazyLoad)
 - [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [ ] use h5 to implement map
@@ -36,8 +38,6 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
-- [x] not goning to use loading-bar
-- [x] use gulp-karma to run the test case(not going to write the test case)
 - [ ] after finish the implement, add a build version
 - [ ] use gulp to auto general index.html, no need to inject the script url by hand
 
