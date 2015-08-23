@@ -28,7 +28,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] new a fold name 'app' to keep the platform code (high)
 - [x] page num and total directive(high)
 - [x] picture browser directive
-- [ ] when no more data, show message (high,make a info directive)(high)
+- [x] when no more data, show message
 - [ ] use lazy load to deal with the images(ocLazyLoad)
 - [x] use scss(not going to use)
 - [ ] use h5 to implement map
