@@ -21,7 +21,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] Setting UI
 - [x] add reply comment use actionSheet
 - [x] remove the edit icon on the right up corner, and add the add comment icon on the header of comments
-- [x] $ionicModal hide still lost the scroll position
+- [x] $ionicModal hide still lost the scroll position, use no-tap-scroll='true'
 - [x] make the small item to a component
 - [x] add tweet comment UI(high)
 - [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
