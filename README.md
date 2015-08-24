@@ -14,7 +14,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] localStorage 
 - [x] Tweet UI
 - [x] add tweet UI
-- [x] Contact UI(done)
+- [x] Contact UI
 - [x] use gulp to Compression the code(in jackey-sparrow.github.io project)
 - [x] log out function
 - [x] implement the online web of this project
