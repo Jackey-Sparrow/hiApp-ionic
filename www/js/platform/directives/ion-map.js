@@ -61,7 +61,7 @@
     /*
      * ionic map controller
      */
-    angular.module('ionic.extension').controller('ionMapController', function ($scope, $ionicLoading, $compile,$timeout) {
+    angular.module('ionic.extension').controller('ionMapController', function ($scope, $ionicLoading, $compile, $timeout) {
         function initialize() {
 
             $scope.latlng = $scope.ionMap.latlng;
@@ -99,15 +99,12 @@
         }
 
         $timeout(function () {
-           // google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
-        if (document.readyState === 'complete') {
-            initialize();
-        } else {
-            google.maps.event.addDomListener(window, 'load', initialize);
-        }
+            // google.maps.event.addDomListener(window, 'load', initialize);
+            if (document.readyState === 'complete') {
+                initialize();
+            } else {
+                google.maps.event.addDomListener(window, 'load', initialize);
+            }
 
         });
         $scope.centerOnMe = function () {
@@ -125,6 +122,7 @@
                 $scope.loading.hide();
             }, function (error) {
                 alert('Unable to get location: ' + error.message);
+                $scope.loading.hide();
             });
         };
 
