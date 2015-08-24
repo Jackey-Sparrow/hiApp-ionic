@@ -33,7 +33,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] use gulp-karma to run the test case(not going to write the test case)
 - [x] ion-alert should has a icon(high)
 - [ ] Tweet post(including photo upload)
-- [ ] use h5 to implement map
+- [x] google map(not translate)
 - [ ] use lazy load to deal with the images(ocLazyLoad)
 - [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
