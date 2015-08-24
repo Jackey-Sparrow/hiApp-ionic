@@ -23,8 +23,8 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] remove the edit icon on the right up corner, and add the add comment icon on the header of comments
 - [x] $ionicModal hide still lost the scroll position, use no-tap-scroll='true'
 - [x] make the small item to a component
-- [x] add tweet comment UI(high)
-- [x] new a fold name 'app' to keep the platform code (high)
+- [x] add tweet comment UI
+- [x] new a fold name 'app' to keep the platform code 
 - [x] page num and total directive(high)
 - [x] picture browser directive
 - [x] when no more data, show message
