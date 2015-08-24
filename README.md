@@ -11,9 +11,9 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] login UI 
 - [x] translate
 - [x] need a language service
-- [x] localStorage (done)
-- [x] Tweet UI(done)
-- [x] add tweet UI(done)
+- [x] localStorage 
+- [x] Tweet UI
+- [x] add tweet UI
 - [x] Contact UI(done)
 - [x] use gulp to Compression the code(in jackey-sparrow.github.io project)
 - [x] log out function
