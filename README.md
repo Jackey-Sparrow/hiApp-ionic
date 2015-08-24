@@ -31,7 +31,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] use scss(not going to use)
 - [x] not goning to use loading-bar
 - [x] use gulp-karma to run the test case(not going to write the test case)
-- [x] ion-alert should has a icon(high)
+- [x] ion-alert should has a icon
 - [ ] Tweet post(including photo upload)(high)
 - [x] google map(not translate)
 - [ ] use lazy load to deal with the images(ocLazyLoad)
