@@ -5,11 +5,11 @@
     'use strict';
 
     /*
-     * ion picture browser
+     * ion map directive
      *
      * @example
      *
-     * <img src='' ion-picture-browser>
+     * <div data-ion-map></div>
      */
     angular.module('ionic.extension').directive('ionMap',
         ['$ionicModal', function ($ionicModal) {
@@ -58,6 +58,9 @@
             };
         }]);
 
+    /*
+     * ionic map controller
+     */
     angular.module('ionic.extension').controller('ionMapController', function ($scope, $ionicLoading, $compile,$timeout) {
         function initialize() {
 
@@ -70,11 +73,11 @@
                 zoom: 16,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
-            var map = new google.maps.Map(document.getElementById("map"),
+            var map = new google.maps.Map(document.getElementById('map'),
                 mapOptions);
 
             //Marker + infowindow + angularjs compiled ng-click
-            var contentString = "<div><a ng-click='clickTest()'>Click me!</a></div>";
+            var contentString = '<div><a ng-click="clickTest()">Click me!</a></div>';
             var compiled = $compile(contentString)($scope);
 
             var infowindow = new google.maps.InfoWindow({
@@ -100,7 +103,7 @@
 
 
 
-        if (document.readyState === "complete") {
+        if (document.readyState === 'complete') {
             initialize();
         } else {
             google.maps.event.addDomListener(window, 'load', initialize);
