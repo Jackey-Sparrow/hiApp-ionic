@@ -49,7 +49,7 @@
                 };
 
                 $scope.feekback = function () {
-                    $ionicAlert.alert($scope, 'hi', 'message');
+                    $ionicAlert.alert($scope, 'hi', 'message happen!', 4);
                 };
 
                 /*

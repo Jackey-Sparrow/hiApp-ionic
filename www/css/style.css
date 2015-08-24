@@ -57,6 +57,39 @@
 .messageBody {
     text-align: center;
     min-height: 50px;
+    position: relative;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+.messageBody .message-icon {
+    width: 34px;
+    height: 50px;
+    display: block;
+    font-size: 30px !important;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    left: 10px;
+}
+
+.message-error{
+    color: #b94a48;
+}
+
+
+.message-info{
+    color: #3a87ad;
+}
+
+.message-success{
+    color: #468847;
+}
+
+.message-warning{
+    color: #c09853;
 }
 
 /* login */
