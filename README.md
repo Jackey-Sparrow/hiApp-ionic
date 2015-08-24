@@ -10,7 +10,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 
 - [x] login UI (done)
 - [x] translate (done)
-- [x] need a language service(done)
+- [x] need a language service
 - [x] localStorage (done)
 - [x] Tweet UI(done)
 - [x] add tweet UI(done)
