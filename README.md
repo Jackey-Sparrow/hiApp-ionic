@@ -9,7 +9,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 #schedule
 
 - [x] login UI (done)
-- [x] translate (done)
+- [x] translate
 - [x] need a language service
 - [x] localStorage (done)
 - [x] Tweet UI(done)
