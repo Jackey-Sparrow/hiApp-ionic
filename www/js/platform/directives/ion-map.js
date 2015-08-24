@@ -40,7 +40,7 @@
                             scope.modal.remove();
                         },
                         latlng: {
-                            lat: 49.07493,
+                            lat: 43.07493,
                             lng: -89.381388
                         }
                     };
