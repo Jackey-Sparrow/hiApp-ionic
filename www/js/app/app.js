@@ -2,7 +2,14 @@
  *　app config
  */
 
-angular.module(globalSettings.appName, ['ionic', 'pascalprecht.translate', 'ionic.extension'])
+var requireModules = [
+    'ionic',
+    'pascalprecht.translate',
+    'ionic.extension',
+    'hiApp.contacts'
+];
+
+angular.module(globalSettings.appName, requireModules)
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {

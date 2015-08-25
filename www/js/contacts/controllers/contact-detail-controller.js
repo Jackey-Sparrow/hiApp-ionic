@@ -7,7 +7,7 @@
     /*
      * contact detail controller
      */
-    angular.module(globalSettings.appName).controller('contactDetailController',
+    angular.module('hiApp.contacts').controller('contactDetailController',
         ['$scope', '$stateParams', 'contactService', '$state',
             function ($scope, $stateParams, contactService, $state) {
 

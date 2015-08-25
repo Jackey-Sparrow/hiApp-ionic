@@ -7,7 +7,7 @@
     /*
      * contact controller
      */
-    angular.module(globalSettings.appName).controller('contactsController',
+    angular.module('hiApp.contacts').controller('contactsController',
         ['$scope', 'contactService', '$translate',
             function ($scope, contactService, $translate) {
 
