@@ -44,6 +44,10 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] after finish the implement, add a build version
 - [ ] use gulp to auto general index.html, no need to inject the script url by hand
 
+
+# framework ajust
+- [ ] split the structure into [app(platform),lib,module], gather everything into app.js
+
 # issues
 
 add to the github [issue](https://github.com/Jackey-Sparrow/hiApp-ionic/issues)
