@@ -64,6 +64,7 @@
     angular.module('ionic.extension').controller('ionMapController', function ($scope, $ionicLoading, $compile, $timeout) {
         function initialize() {
 
+
             $scope.latlng = $scope.ionMap.latlng;
             //var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
             var myLatlng = new google.maps.LatLng($scope.latlng.lat, $scope.latlng.lng);
