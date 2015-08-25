@@ -45,6 +45,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] use gulp to auto general index.html, no need to inject the script url by hand(gulp-inject)
 
 
+
 # framework issue
 - [x] split the structure into [app(platform),lib,module], gather everything into app.js
 
