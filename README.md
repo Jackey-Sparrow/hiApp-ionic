@@ -32,7 +32,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] not goning to use loading-bar
 - [x] use gulp-karma to run the test case(not going to write the test case)
 - [x] ion-alert should has a icon
-- [x] google map(not translate)
+- [x] google map(not translate)(can not use in China)
 - [ ] Tweet post(including photo upload)(high)
 - [ ] baidu map(high)
 - [ ] bing map
