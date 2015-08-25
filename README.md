@@ -42,7 +42,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
 - [ ] after finish the implement, add a build version
-- [ ] use gulp to auto general index.html, no need to inject the script url by hand
+- [ ] use gulp to auto general index.html, no need to inject the script url by hand(gulp-inject)
 
 
 # framework ajust
