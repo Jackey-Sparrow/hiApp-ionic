@@ -5,13 +5,13 @@
     'use strict';
 
     /*
-     * ion map directive
+     * ion google map directive
      *
      * @example
      *
      * <div data-ion-map></div>
      */
-    angular.module('ionic.extension').directive('ionMap',
+    angular.module('ionic.extension').directive('ionGoogleMap',
         ['$ionicModal', function ($ionicModal) {
             return {
                 restrict: 'A',
@@ -20,7 +20,7 @@
 
                     //element bind click event
                     element.bind('click', function () {
-                        $ionicModal.fromTemplateUrl('js/platform/templates/ion-map.html', {
+                        $ionicModal.fromTemplateUrl('js/platform/templates/ion-google-map.html', {
                             scope: scope,
                             animation: 'animated bounceInRight',
                             hideDelay: 1020
