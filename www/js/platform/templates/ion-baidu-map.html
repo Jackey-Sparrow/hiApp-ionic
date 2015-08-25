@@ -1,11 +1,12 @@
-<ion-modal-view data-ng-controller="ionGoogleMapController">
+
+<ion-modal-view data-ng-controller="ionBaiduMapController">
     <ion-header-bar class="bar-dark" no-tap-scroll="true">
         <i class="i-button icon ion-ios-arrow-thin-left" on-tap="back()"></i>
 
         <h1 class="title">Map</h1>
     </ion-header-bar>
     <ion-content>
-        <div id="map" data-tap-disabled="true"></div>
+        <app-map style="height:400px;margin:12px;box-shadow:0 3px 25px black;" address="{{address}}"> </app-map>
     </ion-content>
     <ion-footer-bar class="bar-dark">
         <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>

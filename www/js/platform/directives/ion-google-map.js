@@ -61,7 +61,7 @@
     /*
      * ionic map controller
      */
-    angular.module('ionic.extension').controller('ionMapController', function ($scope, $ionicLoading, $compile, $timeout) {
+    angular.module('ionic.extension').controller('ionGoogleMapController', function ($scope, $ionicLoading, $compile, $timeout) {
         function initialize() {
 
 
@@ -128,7 +128,7 @@
         };
 
         $scope.clickTest = function () {
-            alert('Example of infowindow with ng-click')
+            alert('Example of infowindow with ng-click');
         };
 
         $scope.back = function () {
