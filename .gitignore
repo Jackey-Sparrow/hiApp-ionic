@@ -3,6 +3,5 @@
 
 node_modules/
 platforms/
-plugins/
 .idea
 jshint
