@@ -47,6 +47,26 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 
 # framework ajust
 - [ ] split the structure into [app(platform),lib,module], gather everything into app.js
+- 
+```
+└── hiApp
+    ├── app
+    │   ├── common
+    |   ├── controllers
+    |   ├── partials
+    |   ├── services
+    │   └── content
+    |       ├── i18n
+    |       └── images
+    ├── tweet
+        ├── controllers
+        ├── services
+        ├── templates
+        └── tweet.js(module router and other setting)
+    ├── index.html
+    └── app.js
+```
+
 - [ ] platform-helper
 
 # issues
