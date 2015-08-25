@@ -63,6 +63,11 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
         ├── services
         ├── templates
         └── tweet.js(module router and other setting)
+    ├── lib(mark the sorting rule)
+        ├── 01_jquery
+        ├── 10_ionic
+        ├── 20libs
+        └── 30libs_angular
     ├── index.html
     └── app.js
 ```
