@@ -67,7 +67,7 @@
                 $scope.modalFn = {
                     openModal: function () {
                         platformModal.openModal({
-                            templateUrl: 'js/tweet/templates/add-comment.html',
+                            templateUrl: 'tweet/templates/add-comment.html',
                             scope: $scope
                         });
                     },

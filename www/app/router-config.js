@@ -33,7 +33,7 @@
                 url: '/tweet',
                 views: {
                     'tab-tweet': {
-                        templateUrl: 'js/tweet/templates/tweet.html',
+                        templateUrl: 'tweet/templates/tweet.html',
                         controller: 'tweetController'
                     }
                 }
@@ -43,7 +43,7 @@
                 url: '/tweet/:tweetId',
                 views: {
                     'tab-tweet': {
-                        templateUrl: 'js/tweet/templates/tweet-detail.html',
+                        templateUrl: 'tweet/templates/tweet-detail.html',
                         controller: 'tweetDetailController'
                     }
                 }
@@ -53,7 +53,7 @@
                 url: '/contacts',
                 views: {
                     'tab-contacts': {
-                        templateUrl: 'js/contacts/templates/contacts.html',
+                        templateUrl: 'contacts/templates/contacts.html',
                         controller: 'contactsController'
                     }
                 }
@@ -62,7 +62,7 @@
                 url: '/contacts/:contactId',
                 views: {
                     'tab-contacts': {
-                        templateUrl: 'js/contacts/templates/contact-detail.html',
+                        templateUrl: 'contacts/templates/contact-detail.html',
                         controller: 'contactDetailController'
                     }
                 }

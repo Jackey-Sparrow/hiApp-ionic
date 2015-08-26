@@ -48,7 +48,7 @@
                     start = pageNumber * pageSize,
                     end = (pageNumber + 1) * pageSize,
                     defer = $q.defer();
-                $http.get('js/tweet/tweet.json').then(function (response) {
+                $http.get('tweet/tweet.json').then(function (response) {
                     var len = response.data.length,
                         result = {
                             totalCount:len,

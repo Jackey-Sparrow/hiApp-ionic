@@ -116,7 +116,7 @@
                     openModal: function () {
 
                         platformModal.openModal({
-                            templateUrl: 'js/tweet/templates/add-tweet.html',
+                            templateUrl: 'tweet/templates/add-tweet.html',
                             scope: $scope
                         });
                     },
