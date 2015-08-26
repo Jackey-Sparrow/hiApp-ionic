@@ -1,11 +1,14 @@
 /**
  * Created by Jackey Li on 2015/8/10.
  */
+'use strict';
 
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     clean = require('gulp-clean'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    inject = require('gulp-inject'),
+    watch = require('gulp-watch');
 
 //sass的编译 gulp-ruby-sass
 //自动添加css前缀 gulp-autoprefixer
@@ -18,6 +21,12 @@ var gulp = require('gulp'),
 //图片缓存，只有图片替换了才压缩gulp-cache
 //更改提醒 gulp-notify
 //清除文件 del
+
+gulp.task('index', function () {
+    return gulp.src('./www/index.html')
+        .pipe(inject(gulp.src('./www/**/*.js'), {read: false}), {relative: true})
+        .pipe(gulp.dest('./www'));
+});
 
 
 //use jshint
