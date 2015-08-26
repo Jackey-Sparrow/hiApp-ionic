@@ -82,7 +82,7 @@
                 url: '/setting/:changeLanguage',
                 views: {
                     'tab-setting': {
-                        templateUrl: 'js/language/templates/change-language.html',
+                        templateUrl: 'language/templates/change-language.html',
                         controller: 'changeLanguageController'
                     }
                 }
