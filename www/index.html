@@ -14,7 +14,7 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-    <script src="js/config.js"></script>
+    <script src="app/global.js"></script>
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -28,14 +28,20 @@
     <!--translate-->
     <script src="lib/angular-translate/angular-translate.js"></script>
 
-
-
-    <script src="js/platform/directives/ion-small-item.js"></script>
-    <script src="js/platform/directives/ion-picture-browser.js"></script>
-    <script src="js/platform/directives/ion-google-map.js"></script>
-    <script src="js/platform/directives/ion-baidu-map.js"></script>
-    <script src="js/platform/directives/ion-pagination.js"></script>
-    <script src="js/platform/ion-alert.js"></script>
+    <!--platform file-->
+    <script src="platform/platform.js"></script>
+    <script src="platform/directives/ion-small-item.js"></script>
+    <script src="platform/directives/ion-picture-browser.js"></script>
+    <script src="platform/directives/ion-google-map.js"></script>
+    <script src="platform/directives/ion-baidu-map.js"></script>
+    <script src="platform/directives/ion-pagination.js"></script>
+    <script src="platform/services/ion-alert.js"></script>
+    <!--localStorage-->
+    <script src="platform/services/local-storage-service.js"></script>
+    <!--modal service-->
+    <script src="platform/services/platform-modal.js"></script>
+    <!--basic controller-->
+    <script src="platform/services/basic-controller-service.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -45,23 +51,16 @@
     <script src="app/router-config.js"></script>
     <script src="app/translate-config.js"></script>
 
-    <!--localStorage-->
-    <script src="js/platform/local-storage-service.js"></script>
 
     <!--language-->
     <script src="language/language.js"></script>
     <script src="language/services/language-service.js"></script>
     <script src="language/controllers/change-language-controller.js"></script>
 
-    <!--modal service-->
-    <script src="js/platform/platform-modal.js"></script>
-
-    <!--basic controller-->
-    <script src="js/platform/basic-controller-service.js"></script>
 
     <!--login file-->
-    <script src="js/login/login.js"></script>
-    <script src="js/login/controllers/login-controller.js"></script>
+    <script src="login/login.js"></script>
+    <script src="login/controllers/login-controller.js"></script>
 
     <!--tweet file-->
     <script src="tweet/tweet.js"></script>

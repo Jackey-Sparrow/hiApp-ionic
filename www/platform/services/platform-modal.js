@@ -7,7 +7,7 @@
     /*
      * modal service
      */
-    angular.module(globalSettings.appName).factory('platformModal',
+    angular.module('ionic.extension').factory('platformModal',
         ['$ionicModal', function ($ionicModal) {
 
             var service = {},

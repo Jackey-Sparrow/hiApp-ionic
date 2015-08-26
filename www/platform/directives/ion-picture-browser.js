@@ -20,7 +20,7 @@
 
                     //element bind click event
                     element.bind('click', function () {
-                        $ionicModal.fromTemplateUrl('js/platform/templates/ion-picture-browser.html', {
+                        $ionicModal.fromTemplateUrl('platform/templates/ion-picture-browser.html', {
                             scope: scope,
                             animation: 'animated zoomInUp',
                             hideDelay: 1020

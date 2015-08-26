@@ -14,7 +14,7 @@
 
                     //element bind click event
                     element.bind('click', function () {
-                        $ionicModal.fromTemplateUrl('js/platform/templates/ion-baidu-map.html', {
+                        $ionicModal.fromTemplateUrl('platform/templates/ion-baidu-map.html', {
                             scope: scope,
                             animation: 'animated bounceInRight',
                             hideDelay: 1020

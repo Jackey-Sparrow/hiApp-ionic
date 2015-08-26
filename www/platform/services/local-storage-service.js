@@ -7,7 +7,7 @@
     /*
      * local storage service
      */
-    angular.module(globalSettings.appName).
+    angular.module('ionic.extension').
         factory('localStorageService',
         ['$window',
             function ($window) {
@@ -54,7 +54,7 @@
                 };
 
                 /*
-                 *¡¡get user info
+                 *ï¿½ï¿½get user info
                  */
                 service.getUserInfo = function () {
                     return getObj('hiAppUserInfo');

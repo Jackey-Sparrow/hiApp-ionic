@@ -16,7 +16,7 @@
 
             .state('login', {
                 url: '/login',
-                templateUrl: 'js/login/templates/login.html',
+                templateUrl: 'login/templates/login.html',
                 controller: 'loginController'
             })
 

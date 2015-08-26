@@ -7,7 +7,7 @@
     /*
      * basic controller service
      */
-    angular.module(globalSettings.appName).factory('basicControllerService',
+    angular.module('ionic.extension').factory('basicControllerService',
         ['$ionicLoading', '$ionicPopup',
             function ($ionicLoading, $ionicPopup) {
                 var service = {};

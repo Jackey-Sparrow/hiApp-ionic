@@ -18,7 +18,7 @@
      * data-description : description
      * onTapEvent :on tap event
      */
-    angular.module('ionic.extension', []).directive('ionSmallItem',
+    angular.module('ionic.extension').directive('ionSmallItem',
         [function () {
             return {
                 restrict: 'E',
