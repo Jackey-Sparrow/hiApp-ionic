@@ -7,7 +7,7 @@
     /*
      * setting controller
      */
-    angular.module(globalSettings.appName)
+    angular.module('hiApp.setting')
         .controller('settingController',
         ['$scope', 'localStorageService', '$translate', 'basicControllerService', '$state', '$ionicAlert',
             function ($scope, localStorageService, $translate, basicControllerService, $state, $ionicAlert) {
