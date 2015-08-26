@@ -72,7 +72,7 @@
                 url: '/setting',
                 views: {
                     'tab-setting': {
-                        templateUrl: 'js/setting/templates/setting.html',
+                        templateUrl: 'setting/templates/setting.html',
                         controller: 'settingController'
                     }
                 }
