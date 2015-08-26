@@ -3,7 +3,11 @@
  */
 (function (angular) {
     'use strict';
-    angular.module(globalSettings.appName).factory('tweetCommentService',
+
+    /*
+     * tweet comment service
+     */
+    angular.module('hiApp.tweet').factory('tweetCommentService',
         ['$http', '$q',
             function ($http, $q) {
                 var service = {},

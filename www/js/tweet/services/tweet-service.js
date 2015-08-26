@@ -7,7 +7,7 @@
     /*
      * tweet service
      */
-    angular.module(globalSettings.appName).factory('tweetService',
+    angular.module('hiApp.tweet').factory('tweetService',
         ['$q', '$http', function ($q, $http) {
             var service = {},
                 list = [];

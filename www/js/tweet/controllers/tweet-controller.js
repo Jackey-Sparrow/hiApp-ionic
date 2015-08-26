@@ -7,7 +7,7 @@
     /*
      * tweet controller
      */
-    angular.module(globalSettings.appName).controller('tweetController',
+    angular.module('hiApp.tweet').controller('tweetController',
         ['$scope', 'basicControllerService', 'platformModal', 'tweetService',
             '$translate', '$timeout', '$ionicScrollDelegate',
             function ($scope, basicControllerService, platformModal, tweetService,

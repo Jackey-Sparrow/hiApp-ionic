@@ -7,7 +7,7 @@
     /*
      * add comment service
      */
-    angular.module(globalSettings.appName).factory('tweetDetailService',
+    angular.module('hiApp.tweet').factory('tweetDetailService',
         [function () {
             var service = {};
 

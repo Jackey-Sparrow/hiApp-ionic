@@ -6,7 +6,7 @@
     /*
      * add comment controller
      */
-    angular.module(globalSettings.appName).controller('addCommentController',
+    angular.module('hiApp.tweet').controller('addCommentController',
         ['$scope', '$translate',
             function ($scope, $translate) {
                 $scope.title = $translate.instant('tweet.addComment');

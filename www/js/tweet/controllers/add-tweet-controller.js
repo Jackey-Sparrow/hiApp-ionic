@@ -6,7 +6,7 @@
     /*
      * add tweet controller
      */
-    angular.module(globalSettings.appName).controller('addTweetController',
+    angular.module('hiApp.tweet').controller('addTweetController',
         ['$scope', '$translate',
             function ($scope, $translate) {
 

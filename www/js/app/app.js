@@ -6,7 +6,8 @@ var requireModules = [
     'ionic',
     'pascalprecht.translate',
     'ionic.extension',
-    'hiApp.contacts'
+    'hiApp.contacts',
+    'hiApp.tweet'
 ];
 
 angular.module(globalSettings.appName, requireModules)
