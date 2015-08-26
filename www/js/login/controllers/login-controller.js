@@ -5,7 +5,7 @@
     'use strict';
 
     /* jshint -W072 */ // many parameters because of dependency injection
-    angular.module(globalSettings.appName).controller('loginController',
+    angular.module('hiApp.login').controller('loginController',
         ['$scope', '$state', '$http', 'loginService', '$translate', 'basicControllerService', 'languageService', 'localStorageService',
             function ($scope, $state, $http, loginService, $translate, basicControllerService, languageService, localStorageService) {
 

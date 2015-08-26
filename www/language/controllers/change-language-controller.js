@@ -7,7 +7,7 @@
     /*
      * change language controller
      */
-    angular.module(globalSettings.appName).controller('changeLanguageController',
+    angular.module('hiApp.language').controller('changeLanguageController',
         ['$scope', '$state', 'languageService', 'localStorageService', '$translate', '$timeout',
             function ($scope, $state, languageService, localStorageService, $translate, $timeout) {
 

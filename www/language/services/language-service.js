@@ -7,7 +7,7 @@
     /*
      * language service
      */
-    angular.module(globalSettings.appName).factory('languageService',
+    angular.module('hiApp.language').factory('languageService',
         ['$translate', 'localStorageService',
             function ($translate, localStorageService) {
                 var service = {},

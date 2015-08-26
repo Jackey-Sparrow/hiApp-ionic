@@ -8,7 +8,9 @@ var requireModules = [
     'ionic.extension',
     'hiApp.contacts',
     'hiApp.tweet',
-    'hiApp.setting'
+    'hiApp.setting',
+    'hiApp.language',
+    'hiApp.login'
 ];
 
 angular.module(globalSettings.appName, requireModules)
