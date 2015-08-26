@@ -23,7 +23,7 @@
             .state('tab', {
                 url: '/tab',
                 abstract: true,
-                templateUrl: 'templates/tabs.html'
+                templateUrl: 'app/templates/tabs.html'
             })
 
             // Each tab has its own nav history stack:
