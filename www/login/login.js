@@ -7,5 +7,12 @@
     /*
      * login module
      */
-    angular.module('hiApp.login', []);
+    angular.module('hiApp.login', []).config(function ($stateProvider) {
+        $stateProvider
+            .state('login', {
+                url: '/login',
+                templateUrl: 'login/templates/login.html',
+                controller: 'loginController'
+            });
+    });
 })(angular);

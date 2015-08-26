@@ -13,80 +13,13 @@
         $stateProvider
 
             // setup an abstract state for the tabs directive
-
-            .state('login', {
-                url: '/login',
-                templateUrl: 'login/templates/login.html',
-                controller: 'loginController'
-            })
-
             .state('tab', {
                 url: '/tab',
                 abstract: true,
                 templateUrl: 'app/templates/tabs.html'
             });
 
-            // Each tab has its own nav history stack:
-
-
-            //.state('tab.tweet', {
-            //    url: '/tweet',
-            //    views: {
-            //        'tab-tweet': {
-            //            templateUrl: 'tweet/templates/tweet.html',
-            //            controller: 'tweetController'
-            //        }
-            //    }
-            //})
-            //
-            //.state('tab.tweet-detail', {
-            //    url: '/tweet/:tweetId',
-            //    views: {
-            //        'tab-tweet': {
-            //            templateUrl: 'tweet/templates/tweet-detail.html',
-            //            controller: 'tweetDetailController'
-            //        }
-            //    }
-            //})
-
-            //.state('tab.contacts', {
-            //    url: '/contacts',
-            //    views: {
-            //        'tab-contacts': {
-            //            templateUrl: 'contacts/templates/contacts.html',
-            //            controller: 'contactsController'
-            //        }
-            //    }
-            //})
-            //.state('tab.contact-detail', {
-            //    url: '/contacts/:contactId',
-            //    views: {
-            //        'tab-contacts': {
-            //            templateUrl: 'contacts/templates/contact-detail.html',
-            //            controller: 'contactDetailController'
-            //        }
-            //    }
-            //})
-
-            //.state('tab.setting', {
-            //    url: '/setting',
-            //    views: {
-            //        'tab-setting': {
-            //            templateUrl: 'setting/templates/setting.html',
-            //            controller: 'settingController'
-            //        }
-            //    }
-            //})
-            //
-            //.state('tab.changeLanguage', {
-            //    url: '/setting/:changeLanguage',
-            //    views: {
-            //        'tab-setting': {
-            //            templateUrl: 'language/templates/change-language.html',
-            //            controller: 'changeLanguageController'
-            //        }
-            //    }
-            //});
+        // Each tab has its own nav history stack:
 
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/login');
