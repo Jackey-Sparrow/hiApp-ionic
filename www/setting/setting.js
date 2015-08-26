@@ -7,6 +7,27 @@
     /*
      * setting module
      */
-    angular.module('hiApp.setting', []);
+    angular.module('hiApp.setting', []).config(function ($stateProvider) {
+        $stateProvider
+            .state('tab.setting', {
+                url: '/setting',
+                views: {
+                    'tab-setting': {
+                        templateUrl: 'setting/templates/setting.html',
+                        controller: 'settingController'
+                    }
+                }
+            })
+
+            .state('tab.changeLanguage', {
+                url: '/setting/:changeLanguage',
+                views: {
+                    'tab-setting': {
+                        templateUrl: 'language/templates/change-language.html',
+                        controller: 'changeLanguageController'
+                    }
+                }
+            });
+    });
 
 })(angular);
