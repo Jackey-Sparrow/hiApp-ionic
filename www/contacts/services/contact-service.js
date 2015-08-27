@@ -6,53 +6,42 @@
     /*
      * contact service
      */
-    angular.module('hiApp.contacts').factory('contactService', function () {
-        // Might use a resource here that returns a JSON array
+    angular.module('hiApp.contacts').factory('contactService',
+        ['$q', 'contactHttpService',
+            function ($q, contactHttpService) {
+                // Might use a resource here that returns a JSON array
 
-        // Some fake testing data
-        var contacts = [{
-            id: 0,
-            name: 'Ben Sparrow',
-            lastText: 'You on your way?',
-            face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
-        }, {
-            id: 1,
-            name: 'Max Lynx',
-            lastText: 'Hey, it\'s me',
-            face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
-        }, {
-            id: 2,
-            name: 'Adam Bradleyson',
-            lastText: 'I should buy a boat',
-            face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
-        }, {
-            id: 3,
-            name: 'Perry Governor',
-            lastText: 'Look at my mukluks!',
-            face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png'
-        }, {
-            id: 4,
-            name: 'Mike Harrington',
-            lastText: 'This is wicked good ice cream.',
-            face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
-        }
-        ];
+                // Some fake testing data
+                var service = {},
+                    contacts = [];
 
-        return {
-            all: function () {
-                return contacts;
-            },
-            remove: function (contact) {
-                contacts.splice(contacts.indexOf(contact), 1);
-            },
-            get: function (contactId) {
-                for (var i = 0; i < contacts.length; i++) {
-                    if (contacts[i].id === parseInt(contactId)) {
-                        return contacts[i];
+                /*
+                 *
+                 */
+                service.getAllContacts = function () {
+                    var defer = $q.defer();
+                    contactHttpService.getAllContacts().then(function (data) {
+                        contacts = data;
+                        defer.resolve(data);
+                    }, function (error) {
+                        defer.reject(error);
+                    });
+                    return defer.promise;
+                };
+
+                service.getContactById = function (contactId) {
+                    for (var i = 0; i < contacts.length; i++) {
+                        if (contacts[i].id === parseInt(contactId)) {
+                            return contacts[i];
+                        }
                     }
-                }
-                return null;
-            }
-        };
-    });
+                    return null;
+                };
+
+                service.remove = function (contact) {
+                    contacts.splice(contacts.indexOf(contact), 1);
+                };
+
+                return service;
+            }]);
 })(angular);

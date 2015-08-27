@@ -11,7 +11,7 @@
         ['$scope', '$stateParams', 'contactService', '$state',
             function ($scope, $stateParams, contactService, $state) {
 
-                $scope.contact = contactService.get($stateParams.contactId);
+                $scope.contact = contactService.getContactById($stateParams.contactId);
 
                 /*
                  * back

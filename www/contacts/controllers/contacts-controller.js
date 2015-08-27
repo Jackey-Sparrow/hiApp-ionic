@@ -16,7 +16,11 @@
                     search: $translate.instant('contacts.search')
                 };
 
-                $scope.contacts = contactService.all();
+                contactService.getAllContacts().then(function (data) {
+                    $scope.contacts = data;
+                }, function (error) {
+                    console.log(error);
+                });
                 $scope.remove = function (contact) {
                     contactService.remove(contact);
                 };

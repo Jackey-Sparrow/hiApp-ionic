@@ -34,7 +34,8 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] ion-alert should has a icon
 - [x] google map(not translate)(can not use in China)
 - [ ] Tweet post(including photo upload)(high)
-- [ ] baidu map / bing map(high)
+- [x] baidu map / bing map(high)
+- [ ] translate use json file
 - [ ] use lazy load to deal with the images(ocLazyLoad)
 - [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
