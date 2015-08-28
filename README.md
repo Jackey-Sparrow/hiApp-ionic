@@ -33,11 +33,11 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] use gulp-karma to run the test case(not going to write the test case)
 - [x] ion-alert should has a icon
 - [x] google map(not translate)(can not use in China)
-- [ ] Tweet post(including photo upload)(high)
 - [x] baidu map / bing map(high)
+- [x] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
+- [ ] Tweet post(including photo upload)(high)
 - [ ] translate use json file
 - [ ] use lazy load to deal with the images(ocLazyLoad)
-- [x] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
