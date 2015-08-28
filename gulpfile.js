@@ -29,7 +29,7 @@ gulp.task('index', function () {
     //basePath + '/*/*.js' : the first level in basePath
     //basePath + '/*/*/*.js' : the second level in basePath
     //'!' + basePath + '/lib/*/*.js' : ignore the files
-    
+
     //watch(basePath + '**/*.js', {base: basePath}, function () {
     return gulp.src('./build/index.html')
 
