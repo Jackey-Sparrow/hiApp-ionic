@@ -1,12 +1,19 @@
-<ion-header-bar class="bar-header bar-light" >
+<ion-header-bar class="bar-header bar-light" style="border-bottom: 1px solid gray;">
     <i class="button i-button icon ion-ios-arrow-thin-left" on-tap="back()"></i>
     <h1 class="title">{{contact.name}}</h1>
 </ion-header-bar>
 
 <ion-view view-title="{{contact.name}}">
-    <ion-content class="padding bg-gray">
-        <img ng-src="{{contact.face}}" style="width: 64px; height: 64px">
+    <ion-content class=""  style="padding-left: 20px;">
+        <div class="list">
 
+            <a class="item item-thumbnail-left" href="" style="border: none;">
+                <img src="app/content/img/avatar/avatar01.jpg" style="border-radius: 50px;"/>
+
+                <h2 style="margin-top: 20px;">{{::contact.name}}</h2>
+
+            </a>
+        </div>
         <p>
             {{contact.telephone}}
         </p>
