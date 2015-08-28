@@ -312,3 +312,28 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .scroll {
     height: 100%;
 }
+
+
+
+/*item detail*/
+.item-detail{
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #dddddd;
+    line-height: 30px;
+}
+
+.item-detail .item-content{
+    width: 60%;
+    float: left;
+}
+
+.item-detail i{
+    width: 10%;
+    float: right;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    margin-right: 2%;
+}

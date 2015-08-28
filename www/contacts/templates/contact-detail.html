@@ -1,10 +1,11 @@
 <ion-header-bar class="bar-header bar-light" style="border-bottom: 1px solid gray;">
     <i class="button i-button icon ion-ios-arrow-thin-left" on-tap="back()"></i>
+
     <h1 class="title">{{contact.name}}</h1>
 </ion-header-bar>
 
 <ion-view view-title="{{contact.name}}">
-    <ion-content class=""  style="padding-left: 20px;">
+    <ion-content class="" style="padding-left: 20px;">
         <div class="list">
 
             <a class="item item-thumbnail-left" href="" style="border: none;">
@@ -14,8 +15,10 @@
 
             </a>
         </div>
-        <p>
-            {{contact.telephone}}
-        </p>
+        <div class="item-detail">
+            <div class="item-content">{{contact.telephone}}</div>
+            <i class="ion-ios-telephone-outline"></i>
+            <i class="ion-ios-chatbubble-outline"></i>
+        </div>
     </ion-content>
 </ion-view>

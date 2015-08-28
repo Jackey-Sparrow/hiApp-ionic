@@ -2,7 +2,7 @@
     <h1 class="title">{{::contactsTranslate.contactsName}}</h1>
 </ion-header-bar>
 <ion-header-bar class="bar-subheader" style="background-color: #c9c9ce;padding:1px 0px 0px 0px;">
-    <div id="search-box" class="bar bar-header item-input-inset">
+    <div id="search-box" class="bar item-input-inset">
         <div class="item-input-wrapper">
             <i class="icon ion-search placeholder-icon" on-tap="search()"></i>
             <input type="search" placeholder="{{::contactsTranslate.search}}" ng-model="options.Pattern"/>
@@ -12,7 +12,7 @@
     </div>
 </ion-header-bar>
 <ion-view view-title="hiApp">
-    <ion-content class="padding bg-gray" style="padding-top: 20px;">
+    <ion-content class="padding bg-gray">
         <ion-list>
             <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="contact in contacts"
                       type="item-text-wrap" href="#/tab/contacts/{{contact.id}}">
