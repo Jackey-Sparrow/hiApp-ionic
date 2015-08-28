@@ -102,7 +102,7 @@ npm install
 
 
  ```
- Gulpfile: D:\Ionic\hiApp-ionic\hiAppGulp.js
+ Gulpfile: D:\Ionic\hiApp-ionic\gulpfile.js
  Node interpreter : C:\Program Files\nodejs\node.exe
  Gulp package : D:\Ionic\hiApp-ionic\node_modules\gulp
  ```
