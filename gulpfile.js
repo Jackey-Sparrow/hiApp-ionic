@@ -31,6 +31,12 @@ gulp.task('index', function () {
     //'!' + basePath + '/lib/*/*.js' : ignore the files
     //watch(basePath + '**/*.js', {base: basePath}, function () {
     return gulp.src('./build/index.html')
+
+        .pipe(inject(gulp.src([basePath + '/app/**/*.css'], {read: false}), {
+            name: 'css',
+            addRootSlash: false
+        }), {relative: true})
+
         .pipe(inject(gulp.src([basePath + '/*/*.js'], {read: false}), {
             name: 'module',
             addRootSlash: false
