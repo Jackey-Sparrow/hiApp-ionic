@@ -28,7 +28,7 @@
 
         <div class="item-detail">
             <div class="item-content">{{contact.location}}</div>
-            <i class="ion-ios-location-outline text-orange"></i>
+            <i ion-baidu-map class="ion-ios-location-outline text-orange" lat="{{contact.address.latitude}}" lng="{{contact.address.longitude}}"></i>
         </div>
     </ion-content>
 </ion-view>

@@ -34,10 +34,12 @@
                             scope.modal.remove();
                         },
                         latlng: {
-                            lat: 43.07493,
-                            lng: -89.381388
+                            lat: attr.lat,
+                            lng: attr.lng
                         }
                     };
+
+
 
                     /*
                      * destroy
@@ -63,7 +65,7 @@
                     //instance
                     $scope.map = new BMap.Map('allMap');
                     //init map and set the center
-                    var point = new BMap.Point(116.404, 39.915);
+                    var point = new BMap.Point($scope.ionMap.latlng.lat, $scope.ionMap.latlng.lng);
                     $scope.map.centerAndZoom(point, 15);
                     //map type control
                     $scope.map.addControl(new BMap.MapTypeControl());
@@ -77,17 +79,17 @@
 
                 $scope.centerOnMe = function () {
                     var geolocation = new BMap.Geolocation();
-                    geolocation.getCurrentPosition(function(r){
-                        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                    geolocation.getCurrentPosition(function (r) {
+                        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
                             var mk = new BMap.Marker(r.point);
                             $scope.map.addOverlay(mk);
                             $scope.map.panTo(r.point);
                             //alert('您的位置：'+r.point.lng+','+r.point.lat);
                         }
                         else {
-                            alert('failed'+this.getStatus());
+                            alert('failed' + this.getStatus());
                         }
-                    },{enableHighAccuracy: true});
+                    }, {enableHighAccuracy: true});
                 };
             }]);
 })(angular);
