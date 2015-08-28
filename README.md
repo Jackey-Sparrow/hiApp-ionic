@@ -37,7 +37,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] baidu map / bing map(high)
 - [ ] translate use json file
 - [ ] use lazy load to deal with the images(ocLazyLoad)
-- [ ] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
+- [x] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
@@ -46,7 +46,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 
 
 # framework issue
-- [ ] split the structure into [app(platform),lib,module], gather everything into app.js
+- [x] split the structure into [app(platform),lib,module], gather everything into app.js
 
 
 ```
