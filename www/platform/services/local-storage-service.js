@@ -54,7 +54,7 @@
                 };
 
                 /*
-                 *��get user info
+                 * get user info
                  */
                 service.getUserInfo = function () {
                     return getObj('hiAppUserInfo');
