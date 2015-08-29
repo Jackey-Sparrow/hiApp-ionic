@@ -52,27 +52,27 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 
 
 ```
-©¸©¤©¤ hiApp
-    ©À©¤©¤ app
-    ©¦   ©À©¤©¤ common
-    |   ©À©¤©¤ controllers
-    |   ©À©¤©¤ partials
-    |   ©À©¤©¤ services
-    ©¦   ©¸©¤©¤ content
-    |       ©À©¤©¤ i18n
-    |       ©¸©¤©¤ images
-    ©À©¤©¤ tweet
-        ©À©¤©¤ controllers
-        ©À©¤©¤ services
-        ©À©¤©¤ templates
-        ©¸©¤©¤ tweet.js(module router and other setting)
-    ©À©¤©¤ lib(mark the sorting rule)
-        ©À©¤©¤ 01_jquery
-        ©À©¤©¤ 10_ionic
-        ©À©¤©¤ 20libs
-        ©¸©¤©¤ 30libs_angular
-    ©À©¤©¤ index.html
-    ©¸©¤©¤ app.js
+â””â”€â”€ hiApp
+    â”œâ”€â”€ app
+    â”‚   â”œâ”€â”€ common
+    |   â”œâ”€â”€ controllers
+    |   â”œâ”€â”€ partials
+    |   â”œâ”€â”€ services
+    â”‚   â””â”€â”€ content
+    |       â”œâ”€â”€ i18n
+    |       â””â”€â”€ images
+    â”œâ”€â”€ tweet
+        â”œâ”€â”€ controllers
+        â”œâ”€â”€ services
+        â”œâ”€â”€ templates
+        â””â”€â”€ tweet.js(module router and other setting)
+    â”œâ”€â”€ lib(mark the sorting rule)
+        â”œâ”€â”€ 01_jquery
+        â”œâ”€â”€ 10_ionic
+        â”œâ”€â”€ 20libs
+        â””â”€â”€ 30libs_angular
+    â”œâ”€â”€ index.html
+    â””â”€â”€ app.js
 ```
 
 
