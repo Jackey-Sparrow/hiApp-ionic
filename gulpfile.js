@@ -43,6 +43,12 @@ gulp.task('index', function () {
             addRootSlash: false
         }), {relative: true})
 
+        .pipe(inject(gulp.src([basePath + '/platform/*/*.js'], {read: false}), {
+            name: 'platform',
+            addRootSlash: false
+        }), {relative: true})
+
+
         .pipe(inject(gulp.src([basePath + '/*/*/*.js', '!' + basePath + '/lib/*/*.js', '!' + basePath + '/platform/*/*.js'], {read: false}), {
             name: 'submodule',
             addRootSlash: false
