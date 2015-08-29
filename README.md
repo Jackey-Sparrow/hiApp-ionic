@@ -35,6 +35,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] google map(not translate)(can not use in China)
 - [x] baidu map / bing map(high)
 - [x] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
+- [x] use gulp to auto general index.html, no need to inject the script url by hand(gulp-inject)
 - [ ] Tweet post(including photo upload)(high)
 - [ ] translate use json file
 - [ ] use lazy load to deal with the images(ocLazyLoad)
@@ -42,7 +43,7 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
 - [ ] after finish the implement, add a build version
-- [ ] use gulp to auto general index.html, no need to inject the script url by hand(gulp-inject)
+
 
 
 
