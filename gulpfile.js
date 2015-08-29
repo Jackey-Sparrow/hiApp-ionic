@@ -30,31 +30,31 @@ gulp.task('index', function () {
     //basePath + '/*/*/*.js' : the second level in basePath
     //'!' + basePath + '/lib/*/*.js' : ignore the files
 
-    //watch(basePath + '**/*.js', {base: basePath}, function () {
-    return gulp.src('./build/index.html')
+    watch(basePath + '/**/*.js', {base: basePath}, function () {
+        return gulp.src('./build/index.html')
 
-        .pipe(inject(gulp.src([basePath + '/app/**/*.css'], {read: false}), {
-            name: 'css',
-            addRootSlash: false
-        }), {relative: true})
+            .pipe(inject(gulp.src([basePath + '/app/**/*.css'], {read: false}), {
+                name: 'css',
+                addRootSlash: false
+            }), {relative: true})
 
-        .pipe(inject(gulp.src([basePath + '/*/*.js'], {read: false}), {
-            name: 'module',
-            addRootSlash: false
-        }), {relative: true})
+            .pipe(inject(gulp.src([basePath + '/*/*.js'], {read: false}), {
+                name: 'module',
+                addRootSlash: false
+            }), {relative: true})
 
-        .pipe(inject(gulp.src([basePath + '/platform/*/*.js'], {read: false}), {
-            name: 'platform',
-            addRootSlash: false
-        }), {relative: true})
+            .pipe(inject(gulp.src([basePath + '/platform/*/*.js'], {read: false}), {
+                name: 'platform',
+                addRootSlash: false
+            }), {relative: true})
 
 
-        .pipe(inject(gulp.src([basePath + '/*/*/*.js', '!' + basePath + '/lib/*/*.js', '!' + basePath + '/platform/*/*.js'], {read: false}), {
-            name: 'submodule',
-            addRootSlash: false
-        }), {relative: true})
-        .pipe(gulp.dest('./build'));
-    // });
+            .pipe(inject(gulp.src([basePath + '/*/*/*.js', '!' + basePath + '/lib/*/*.js', '!' + basePath + '/platform/*/*.js'], {read: false}), {
+                name: 'submodule',
+                addRootSlash: false
+            }), {relative: true})
+            .pipe(gulp.dest('./build'));
+    });
 
 });
 
