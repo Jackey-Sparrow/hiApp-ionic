@@ -7,6 +7,8 @@
     /*
      * tweet detail controller
      */
+
+    /* jshint -W072 */ // many parameters because of dependency injection
     angular.module('hiApp.tweet').controller('tweetDetailController',
         ['$scope', '$stateParams', 'tweetService', '$ionicHistory', '$state',
             'tweetCommentService', '$ionicActionSheet', '$timeout',
@@ -49,7 +51,7 @@
                     tweetCommentService.getCommentByTweetId($scope.tweet.id).then(function (comments) {
                         $scope.comments = comments;
                         $scope.hasComments = $scope.comments.length;
-                    }, function (error) {
+                    }, function () {
                         //todo
                     });
                 };
