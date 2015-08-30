@@ -13,6 +13,7 @@
                 $scope.title = $translate.instant('tweet.addTweet');
                 $scope.somethingNew = $translate.instant('tweet.somethingNew');
 
+                //todo : add actionsheet here, 1 is for takePhoto, 2 is for select picture
                 $scope.takeCamera = function () {
                     $scope.takePhoto();
                 };
