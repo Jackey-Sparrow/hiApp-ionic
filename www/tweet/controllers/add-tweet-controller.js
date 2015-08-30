@@ -7,8 +7,8 @@
      * add tweet controller
      */
     angular.module('hiApp.tweet').controller('addTweetController',
-        ['$scope', '$translate', '$cordovaCamera',
-            function ($scope, $translate, $cordovaCamera) {
+        ['$scope', '$translate', '$cordovaCamera', '$ionicAlert',
+            function ($scope, $translate, $cordovaCamera, $ionicAlert) {
 
                 $scope.title = $translate.instant('tweet.addTweet');
                 $scope.somethingNew = $translate.instant('tweet.somethingNew');
@@ -18,18 +18,22 @@
                 };
 
                 $scope.takePhoto = function () {
-                    var options = {
-                        destinationType: Camera.DestinationType.FILE_URI,
-                        sourceType: Camera.PictureSourceType.CAMERA
-                    };
+                    try {
+                        var options = {
+                            destinationType: Camera.DestinationType.FILE_URI,
+                            sourceType: Camera.PictureSourceType.CAMERA
+                        };
 
-                    $cordovaCamera.getPicture(options).then(function (imageUrl) {
-                        var image = document.getElementById('myImage');
-                        image.src = imageUrl;
-                    }, function (err) {
-                        // error
-                        alert(err);
-                    });
+                        $cordovaCamera.getPicture(options).then(function (imageUrl) {
+                            var image = document.getElementById('myImage');
+                            image.src = imageUrl;
+                        }, function (err) {
+                            $ionicAlert.alert($scope, 'warning', 'camera does not support', 3);
+                        });
+                    }
+                    catch (ex) {
+                        $ionicAlert.alert($scope, 'warning', 'camera does not support', 3);
+                    }
                 };
 
                 $scope.selectPhoto = function () {
@@ -44,6 +48,6 @@
                 };
             }
 
-    ])
+        ])
     ;
 })(angular);
