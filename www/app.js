@@ -10,7 +10,8 @@ var requireModules = [
     'hiApp.tweet',
     'hiApp.setting',
     'hiApp.language',
-    'hiApp.login'
+    'hiApp.login',
+    'ngCordova'
 ];
 
 angular.module(globalSettings.appName, requireModules)

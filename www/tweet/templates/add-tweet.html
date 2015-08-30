@@ -9,13 +9,14 @@
         <textarea rows="8" style="width:100%;margin-top: 1px;padding: 5px;" placeholder="{{::somethingNew}}"></textarea>
         <div class="message-tool">
             <ul>
-                <li class="ion-camera"></li>
+                <li class="ion-camera" on-tap="takeCamera()"></li>
                 <li class="ion-image"></li>
                 <li class="ion-happy-outline"></li>
                 <li class="ion-at"></li>
                 <li class="ion-location"></li>
             </ul>
         </div>
+        <div id="myImage" style="width: 100px;height: 100px;;"></div>
     </ion-content>
 
 </ion-modal-view>
