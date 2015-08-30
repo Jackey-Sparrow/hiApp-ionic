@@ -16,7 +16,7 @@ var requireModules = [
 
 angular.module('hiApp', requireModules)
 
-    .run(function ($ionicPlatform) {
+    .run(function ($ionicPlatform,$rootScope) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
@@ -30,6 +30,10 @@ angular.module('hiApp', requireModules)
                 StatusBar.styleLightContent();
             }
         });
+        $rootScope.$on('httpError', function () {
+            console.log('401 http error ');
+        });
+
     }).config(function ($stateProvider, $urlRouterProvider) {
 
         // Ionic uses AngularUI Router which uses the concept of states
@@ -51,3 +55,21 @@ angular.module('hiApp', requireModules)
         $urlRouterProvider.otherwise('/login');
 
     });
+
+
+angular.module('hiApp').factory('httpInterceptor',
+    ['$q', '$rootScope', function ($q, $rootScope) {
+        var interptor = {
+            'responseError': function (response) {
+                if (response.status === 401) {
+                    $rootScope.$emit('httpError', response);
+                    return;
+                }
+            }
+        };
+        return interptor;
+    }]);
+
+angular.module('hiApp').config(function ($httpProvider) {
+    $httpProvider.interceptors.push('httpInterceptor');
+});
