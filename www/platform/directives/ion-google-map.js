@@ -16,7 +16,7 @@
             return {
                 restrict: 'A',
                 scope: {},
-                link: function (scope, element, attr) {
+                link: function (scope, element) {
 
                     //element bind click event
                     element.bind('click', function () {
@@ -108,6 +108,10 @@
             }
 
         });
+
+        /*
+         * get current location
+         */
         $scope.centerOnMe = function () {
             if (!$scope.map) {
                 return;

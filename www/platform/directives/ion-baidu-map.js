@@ -5,6 +5,15 @@
 (function (angular) {
     'use strict';
 
+    /*
+     * ion-baidu-map directive
+     *
+     * @example
+     *
+     * <i ion-baidu-map class="ion-ios-location-outline text-orange" lat="xxx" lng="xxx"></i>
+     *
+     * @example
+     */
     angular.module('ionic.extension').directive('ionBaiduMap',
         ['$ionicModal', function ($ionicModal) {
             return {
@@ -40,7 +49,6 @@
                     };
 
 
-
                     /*
                      * destroy
                      */
@@ -53,9 +61,14 @@
                 }
             };
         }]);
+
+    /*
+     * ion baidu map controller
+     *
+     */
     angular.module('ionic.extension').controller('ionBaiduMapController',
-        ['$scope', '$timeout',
-            function ($scope, $timeout) {
+        ['$scope', '$timeout', '$ionicAlert',
+            function ($scope, $timeout, $ionicAlert) {
                 $scope.back = function () {
                     $scope.ionMap.hide();
                 };
@@ -87,7 +100,7 @@
                             //alert('您的位置：'+r.point.lng+','+r.point.lat);
                         }
                         else {
-                            alert('failed' + this.getStatus());
+                            $ionicAlert.alert($scope, 'error', 'get location error', 4);
                         }
                     }, {enableHighAccuracy: true});
                 };

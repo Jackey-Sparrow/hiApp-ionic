@@ -14,7 +14,7 @@ var requireModules = [
     'ngCordova'
 ];
 
-angular.module(globalSettings.appName, requireModules)
+angular.module('hiApp', requireModules)
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -50,4 +50,4 @@ angular.module(globalSettings.appName, requireModules)
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/login');
 
-    });;
+    });

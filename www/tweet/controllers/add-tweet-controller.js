@@ -3,6 +3,7 @@
  */
 (function (angular) {
     'use strict';
+
     /*
      * add tweet controller
      */
@@ -18,6 +19,9 @@
                     $scope.takePhoto();
                 };
 
+                /*
+                 * take a new photo
+                 */
                 $scope.takePhoto = function () {
                     try {
                         var options = {
@@ -28,7 +32,7 @@
                         $cordovaCamera.getPicture(options).then(function (imageUrl) {
                             var image = document.getElementById('myImage');
                             image.src = imageUrl;
-                        }, function (err) {
+                        }, function () {
                             $ionicAlert.alert($scope, 'warning', 'camera does not support', 3);
                         });
                     }
@@ -37,6 +41,9 @@
                     }
                 };
 
+                /*
+                 * selet photo from photo
+                 */
                 $scope.selectPhoto = function () {
 
                 };

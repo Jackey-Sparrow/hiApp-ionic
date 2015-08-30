@@ -4,7 +4,7 @@
 (function (angular) {
     'use strict';
 
-    angular.module(globalSettings.appName).config(function ($translateProvider) {
+    angular.module('hiApp').config(function ($translateProvider) {
 
         //translate
         $translateProvider.translations('en', {

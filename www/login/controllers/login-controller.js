@@ -6,8 +6,8 @@
 
     /* jshint -W072 */ // many parameters because of dependency injection
     angular.module('hiApp.login').controller('loginController',
-        ['$scope', '$state', '$http', 'loginService', '$translate', 'basicControllerService', 'languageService', 'localStorageService',
-            function ($scope, $state, $http, loginService, $translate, basicControllerService, languageService, localStorageService) {
+        ['$scope', '$state', '$http', '$translate', 'basicControllerService', 'languageService', 'localStorageService',
+            function ($scope, $state, $http, $translate, basicControllerService, languageService, localStorageService) {
 
                 $scope.login = {
                     userName: '',
@@ -71,12 +71,5 @@
 
             }
         ]);
-
-    angular.module(globalSettings.appName).factory('loginService',
-        [
-            function () {
-
-                return null;
-            }]);
 
 })(angular);
