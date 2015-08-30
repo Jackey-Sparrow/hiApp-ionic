@@ -37,51 +37,34 @@ all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 - [x] contacts search bar need to optimize(still has some bug,may remove the title in header)(high)
 - [x] use gulp to auto general index.html, no need to inject the script url by hand(gulp-inject)
 - [x] translate use json file(change this tp issue)
-- [ ] Tweet post(including photo upload)(high)
+- [x] Tweet post(including photo upload)(high)
 - [ ] use lazy load to deal with the images(ocLazyLoad)
 - [ ] performance optimize(including watchers / scope / digest time),should add the function at the beginning
 - [ ] ionic android (not ready)
 - [ ] ionic ios(ready)
 - [ ] after finish the implement, add a build version
 
-
-
-
-# framework issue
-- [x] split the structure into [app(platform),lib,module], gather everything into app.js
-
+# how to run
 
 ```
-└── hiApp
-    ├── app
-    │   ├── common
-    |   ├── controllers
-    |   ├── partials
-    |   ├── services
-    │   └── content
-    |       ├── i18n
-    |       └── images
-    ├── tweet
-        ├── controllers
-        ├── services
-        ├── templates
-        └── tweet.js(module router and other setting)
-    ├── lib(mark the sorting rule)
-        ├── 01_jquery
-        ├── 10_ionic
-        ├── 20libs
-        └── 30libs_angular
-    ├── index.html
-    └── app.js
+npm install -g http-server
+cd 'your local directory' (ps: cd to the 'www')
+http-server
+
+```
+or
+
+```
+put the project to your IIS
+
 ```
 
+or
 
-- [ ] platform-helper
+```
+use the webstorm to open the index.html
 
-# issues
-
-add to the github [issue](https://github.com/Jackey-Sparrow/hiApp-ionic/issues)
-
+```
 
 # use gulp
 - go to your directory and download the package
@@ -92,7 +75,7 @@ npm install
 
 ```
 
-- configure you gulp configurations
+- configure you gulp configurations in webstorm
 
   ##process :
 
