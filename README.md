@@ -1,8 +1,8 @@
-# [hiApp-ionic](http://jackey-sparrow.github.io/)
+# [hiApp-ionic](http://jackey-sparrow.github.io/ionic.html)
 
 [![GitHub issues](https://img.shields.io/github/issues/Jackey-Sparrow/hiApp-ionic.svg?style=flat-square)](https://github.com/Jackey-Sparrow/hiApp-ionic/issues)
 
-a hybrid app basic on ionic : [hiApp-ionic](http://jackey-sparrow.github.io/)
+a hybrid app basic on ionic : [hiApp-ionic](http://jackey-sparrow.github.io/ionic.html)
 
 all the UI and function will follow [hiApp(written by F7)](http://hi.dearb.me/)
 
