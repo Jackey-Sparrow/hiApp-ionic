@@ -17,18 +17,19 @@
         </div>
         <div class="item-detail">
             <div class="item-content" style="text-decoration: none;">{{contact.telephone}}</div>
-            <i class="ion-ios-telephone-outline text-orange"></i>
-            <i class="ion-ios-chatbubble-outline text-orange"></i>
+            <i class="ion-ios-telephone-outline text-orange" on-tap="platformDeviceHelper.call(contact.telephone)"></i>
+            <i class="ion-ios-chatbubble-outline text-orange" on-tap=""></i>
         </div>
 
         <div class="item-detail">
             <div class="item-content">{{contact.email}}</div>
-            <i class="ion-ios-email-outline text-orange"></i>
+            <i class="ion-ios-email-outline text-orange" on-tap="platformDeviceHelper.email(contact.email)"></i>
         </div>
 
         <div class="item-detail">
             <div class="item-content">{{contact.location}}</div>
-            <i ion-baidu-map class="ion-ios-location-outline text-orange" lat="{{contact.address.latitude}}" lng="{{contact.address.longitude}}"></i>
+            <i ion-baidu-map class="ion-ios-location-outline text-orange" lat="{{contact.address.latitude}}"
+               lng="{{contact.address.longitude}}"></i>
         </div>
     </ion-content>
 </ion-view>

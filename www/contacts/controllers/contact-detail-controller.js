@@ -8,10 +8,12 @@
      * contact detail controller
      */
     angular.module('hiApp.contacts').controller('contactDetailController',
-        ['$scope', '$stateParams', 'contactService', '$state',
-            function ($scope, $stateParams, contactService, $state) {
+        ['$scope', '$stateParams', 'contactService', '$state', 'platformDeviceHelper',
+            function ($scope, $stateParams, contactService, $state, platformDeviceHelper) {
 
                 $scope.contact = contactService.getContactById($stateParams.contactId);
+
+                $scope.platformDeviceHelper = platformDeviceHelper;
 
                 /*
                  * back
