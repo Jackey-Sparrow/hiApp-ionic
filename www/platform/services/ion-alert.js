@@ -41,6 +41,13 @@
                     }
                 };
 
+                /**
+                 * alert
+                 * @param scope
+                 * @param title
+                 * @param message
+                 * @param type
+                 */
                 service.alert = function (scope, title, message, type) {
                     var choosenType;
                     if (type > alertType.length) {
@@ -63,6 +70,9 @@
                     }
 
 
+                    /**
+                     * configuration
+                     */
                     var myPopup = $ionicPopup.show({
                         template: '<div class="messageBody '+choosenType.className+'"><i class="message-icon icon ' + choosenType.icon +
                         ' "></i>' + message + '</div>',

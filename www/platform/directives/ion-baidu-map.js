@@ -90,6 +90,9 @@
                     marker.setAnimation(BMAP_ANIMATION_BOUNCE);
                 });
 
+                /**
+                 *  find my location
+                 */
                 $scope.centerOnMe = function () {
                     var geolocation = new BMap.Geolocation();
                     geolocation.getCurrentPosition(function (r) {
@@ -106,3 +109,4 @@
                 };
             }]);
 })(angular);
+
