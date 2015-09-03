@@ -4,6 +4,9 @@
 (function (angular) {
     'use strict';
 
+    /**
+     * translation
+     */
     angular.module('hiApp').config(function ($translateProvider) {
 
         //translate
@@ -106,6 +109,7 @@
 
         var key = 'en';
 
+        //get localStorage
         var lastStoreUser = JSON.parse(localStorage.getItem('hiAppUserInfo')) || [];
         if (lastStoreUser && lastStoreUser.languageTranslate) {
             key = lastStoreUser.languageTranslate;
