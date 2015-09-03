@@ -3,13 +3,14 @@
  */
 (function (angular) {
     'use strict';
+
     /*
      * contact service
      */
     angular.module('hiApp.contacts').factory('contactService',
         ['$q', 'contactHttpService',
             function ($q, contactHttpService) {
-                // Might use a resource here that returns a JSON array
+
 
                 // Some fake testing data
                 var service = {},
@@ -29,6 +30,9 @@
                     return defer.promise;
                 };
 
+                /*
+                 * get contact by id
+                 */
                 service.getContactById = function (contactId) {
                     for (var i = 0; i < contacts.length; i++) {
                         if (contacts[i].id === parseInt(contactId)) {
@@ -38,6 +42,9 @@
                     return null;
                 };
 
+                /*
+                 * remove contact
+                 */
                 service.remove = function (contact) {
                     contacts.splice(contacts.indexOf(contact), 1);
                 };
