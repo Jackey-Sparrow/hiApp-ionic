@@ -30,8 +30,8 @@
                         };
 
                         $cordovaCamera.getPicture(options).then(function (imageUrl) {
-                            var image = document.getElementById('myImage');
-                            image.src = imageUrl;
+                            //var image = document.getElementById('myImage');
+                            //image.src = imageUrl;
                         }, function () {
                             $ionicAlert.alert($scope, 'warning', 'camera does not support', 3);
                         });
